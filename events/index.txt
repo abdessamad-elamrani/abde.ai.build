@@ -1,0 +1,196 @@
+2:I[5795,["901","static/chunks/901-828e4b97b3d8fb45.js","814","static/chunks/814-947ca6217d472e23.js","38","static/chunks/app/events/page-6eebb057010f9f6a.js"],"EventsSection"]
+9:I[3182,[],""]
+a:I[7707,[],""]
+b:I[2886,["553","static/chunks/553-ab061d80f4220e9c.js","185","static/chunks/app/layout-dcc69de85927c075.js"],"Toaster"]
+3:T84d,
+
+
+`Event Recap: Big Data Digital Transformation Nov 2024, Amsterdam, The Netherlands `
+
+I’m thrilled to share that I recently had the opportunity to host an engaging workshop in Amsterdam, exploring the transformative power of Big Data, Machine Learning, and the latest applications of emerging technologies. 
+
+From discussing the evolution of Big Data technologies like Apache Spark and Kafka to diving into real-world Machine Learning applications in predictive analytics and anomaly detection, we explored how these innovations are shaping industries like telecommunications, retail, and energy optimization.
+
+Here are some of the highlights we covered:
+
+- How Big Data unlocks actionable insights in decision-making
+- Using Machine Learning to enhance user experiences and operational efficiency
+- Leveraging AI and IoT for sustainable and innovative solutions
+
+As someone passionate about solving real-world problems through technology, I believe it’s crucial to connect cutting-edge tools with ethical practices and human-centric applications. The workshop fostered insightful conversations and new ideas about how we can collaborate to drive meaningful change.
+
+A big takeaway? The future of technology is not just in the tools we develop, but in how we use them to transform lives and industries.
+
+I’m always excited to connect with like-minded professionals who share a passion for innovation. Let’s discuss how we can push the boundaries of what’s possible together! Feel free to reach out or share your thoughts below.
+
+#BigData #MachineLearning #AI #EmergingTechnologies #Innovation #Workshops #TechnologyLeadership
+
+
+`Some pictures from the event`
+
+![Workshop Session](/images/blog/2024-11-22-Global-Big-Data-and-Digital-Transformation-Forum/pic1.jpg)
+*Leading the workshop session on Big Data technologies*
+
+![Interactive Discussion](/images/blog/2024-11-22-Global-Big-Data-and-Digital-Transformation-Forum/pic2.jpg)
+*Interactive discussion with participants*
+
+![Group Photo](/images/blog/2024-11-22-Global-Big-Data-and-Digital-Transformation-Forum/pic3.jpg)
+*Group photo with workshop participants*
+4:T793,
+
+`Strategic & Technological Innovation: Navigating the Future of Cybersecurity`
+
+![Going through some deep Fortigate flows](/images/blog/2023-10-26-Pulitzer-EuropeanExecutiveForum/abde-pulitzer.png)
+
+At the eSentire European Executive Forum held at the Pulitzer Hotel in Amsterdam, I had the privilege of participating as a speaker among senior leaders from MSPs across the Benelux region. The event, sponsored by eSentire and hosted by Phil Skelton, focused on the evolving cybersecurity landscape, emphasizing the integration of advanced technologies like AI and machine learning in Managed Detection and Response (MDR) services.
+
+During my talk, I highlighted the critical need for strategic partnerships to address the rising sophistication of cyber threats and the cybersecurity skill gap. I discussed how MSPs can leverage collaborations with specialized providers to enhance their service offerings and meet regulatory compliance requirements, such as GDPR and NIS2.
+
+The round table also provided a platform for discussing the challenges of differentiating services in a competitive market and the importance of investing in cybersecurity infrastructure. I shared insights on how digital transformation and regulatory pressures are driving the demand for robust cybersecurity measures.
+
+Overall, the event underscored the importance of innovation and collaboration in navigating the complexities of the cybersecurity market, offering valuable insights into future trends and strategic opportunities.
+
+Since this was top executives round table, for privacy reason I will not share pictures from inside the round table event.
+
+[Read the full event report here](https://www.iteuropa.com/sites/default/files/leaders-in-discussion/files/esentire_european_executive_forum_feb_22.pdf)
+
+`Some pictures during the event`
+
+![Discussion at Pulitzer Hotel](/images/blog/2023-10-26-Pulitzer-EuropeanExecutiveForum/Abdessamad_26102023_003.jpg)
+5:T94c,
+I'm happy to share about the amazing workshops we recently held in Morocco. My amazing colleague Kim Frellsen joined me as we met with teams from INWI and Orange, along with our great local Fortinet team. Together, we explored some really exciting developments in technology and security.
+
+## 5G Security: Building a Safer Future
+
+5G is changing everything in telecom, and that means we need to think differently about security. Kim kicked things off by sharing some really important points:
+
+- What makes 5G networks more vulnerable to attacks and why we need to pay attention
+- Smart ways to keep 5G infrastructure safe and prevent security problems
+- How Fortinet's security tools can help protect these modern networks
+
+## Deep Packet Inspection (DPI): Insights into Network Traffic
+
+I got to dive deep into the latest TLS developments and the challenges telecom operators face with DPI. If you're curious about these challenges, check out our webfiltering writeup or the TLS ECH animation.
+
+(Note: Some details about our DPI solution are Fortinet proprietary, so I can't share everything here.)
+
+## Quantum Computing and Cryptography: Preparing for the Next Era
+
+Quantum computing is going to change cybersecurity in big ways. We talked about:
+
+- Where quantum computing is now and where it's heading
+- How it might affect our current encryption methods
+- Ways we can prepare by using quantum-resistant encryption
+
+## Fortinet: A Trusted Partner in Security
+
+Throughout our sessions, we showed how Fortinet can help:
+
+- Creating security solutions specifically for telecom companies
+- Sharing real examples of our technology making a difference
+- Showing how we're ready to tackle new challenges in 5G, DPI, and more
+
+## Working Together for the Future
+
+These workshops were about more than just sharing information - they were about working together to build something better. By talking directly with the people running these networks, we could help Moroccan telecom operators prepare for what's coming next in our digital world. It was great to share ideas and think about solutions together.
+
+Thank you to everyone who helped make these workshops so successful, especially Youness Fikhar our main local SE in the telco market, Youssef Fouzi our great Morocco country manager, Mohammed El Kadiri, and all local Fortinet team. 
+
+Looking forward to our next collaboration!
+6:T64c,
+
+
+I had the privilege of speaking at a our yearly SME event held at the Mouratoglou Hotel in Sophia Antipolis, France. 
+
+This event brought together leading experts in the field of cybersecurity, and I was honored to contribute to the discussions with my insights and experiences.
+During the sessions, I delved into the intricacies of low-level traffic generation within the cybersecurity industry. My presentation focused on advanced techniques for performance enhancement, specifically utilizing kernel netmap and DPDK. These tools are pivotal in optimizing network performance and ensuring robust security measures.
+
+Furthermore, I explored the power of Unix systems in simulating complex telecommunications scenarios. This included demonstrations on simulating GTPv1, 5G PFCP, and other cutting-edge technologies. These simulations are crucial for testing and validating security protocols in real-world telco environments.
+The event was a fantastic opportunity to share knowledge and engage with fellow professionals who are equally passionate about advancing cybersecurity technologies. It was an enriching experience that underscored the importance of collaboration and innovation in our field.
+I am grateful for the opportunity to have been part of such a dynamic and forward-thinking event, and I look forward to continuing to contribute to the cybersecurity community.
+
+
+
+![Going through some deep kernel traffic gen techniques](/images/blog/2023-10-18-Mouratoglou-workshop/Day1-Abde_1.jpeg)
+
+![netmap & dpdk and kernel recomplication](/images/blog/2023-10-18-Mouratoglou-workshop/Day1-Abde_2.jpeg)
+
+
+7:Tb31,
+
+`Empowering Telco System Engineer Champions: Highlights from Our Annual Workshop`
+
+Every year, we gather for our much-anticipated Telco workshop, a pivotal event designed to equip our Telco SE champions with the latest insights and advancements in Telco Security. This year was no exception, and I had the privilege of leading some in-depth sessions on critical topics, including the often-overlooked gray areas of Quality of Service (QoS) and solutions validation.
+
+Here are some of the main topics I wanted to highlight
+
+## Session1: Telco and QoS challenges
+
+The session on QoS was particularly rewarding. We delved into complex traffic flows, explored the intricacies of chip-level processes, we also tackled kernel QoS, design strategies, and common pitfalls. 
+
+The Fortinet System Engineers were highly engaged, peppering me with questions throughout the session. What truly stood out was the overwhelming response afterward—many engineers approached me to discuss their challenging QoS projects  in the Telco market or upcoming initiatives that needed to address QoS issues. This enthusiasm has inspired me to consider writing a more  internal comprehensive document on the subject.
+
+## Session2: Fortinet solutions validation and return on experience
+
+The solutions validation session was equally exciting. I had the pleasure of collaborating as speaker with Simon Bryden, who shared brilliant insights from our experiences in solutions validation and testing. We concluded the discussion with some entertaining anecdotes from the field, providing a light-hearted yet informative end to the workshop.
+
+Below are some photos capturing the energy and engagement of the event.
+
+I blured parts of the pic that might have some internal FTNT info
+
+## Session3: cFOS in standalone docker and Kubernetes
+
+This wasnt a one I gave directly, but I tried to actively participate and help audience with the brilliant handson lab done by Kim Frellesen, the session highlights the latest containernised Fortinet solution (cFOS) aka container Fortigate, in typical docker or kubernetes deployements..
+
+
+`here are pictures from the event, internal infos on slides are blured, and last pic is right before our return flight to Amsterdam from Nice with my colleague and good friend Adel El Adham`
+
+![Going through some deep Fortigate flows](/images/blog/2024-11-05-telco-workshop-nice-france/pic1.jpeg)
+*Going through some deep Fortigate flows*
+
+![Internal QoS and chips](/images/blog/2024-11-05-telco-workshop-nice-france/pic2.jpeg)
+*Internal QoS and chips*
+
+![More QoS](/images/blog/2024-11-05-telco-workshop-nice-france/pic3.jpeg)
+*More QoS internal flows*
+
+![Leaving Nice Airport right before return flight, with my colleague Adel](/images/blog/2024-11-05-telco-workshop-nice-france/pic4.jpeg)
+*Leaving Nice Airport right before return flight, with my colleague Adel*
+8:T76e,
+
+# Digital Transformation in the Energy Sector Forum 2023
+
+
+On June 5th, 2023, I had the privilege of speaking at a significant event in Amsterdam, focusing on the intersection of Artificial Intelligence (AI), cybersecurity, and energy efficiency. This event brought together industry leaders and innovators to discuss the transformative impact of AI and IoT on the energy sector.
+
+## Presentation Highlights
+
+During my presentation, titled "Artificial Intelligence and IoT: Revolutionizing the Energy Efficiency Sector," I explored the potential of smart technologies to optimize energy consumption across various sectors. Drawing from my extensive experience with top tech vendors like Fortinet and Palo Alto Networks, I highlighted the challenges and opportunities in:
+
+- Industrial automation and control systems
+- Transportation and logistics optimization
+- Residential energy management
+- Commercial building efficiency
+
+## Key Focus Areas
+
+A significant portion of the discussion centered on the residential sector, where substantial energy waste occurs due to inefficient appliances and systems. I shared insights on how smart home technologies can significantly reduce energy waste:
+
+- Intelligent sensor networks
+- Home automation management systems
+- AI-driven optimization algorithms
+- Real-time consumption monitoring
+
+## Environmental Impact
+
+Furthermore, I addressed the energy dilemma associated with AI, emphasizing:
+
+- Environmental concerns of training large-scale AI models
+- Role of hyperscale data centers
+- Balancing technological advancement with sustainability
+- Green computing initiatives
+
+The event was a fantastic opportunity to connect with fellow technologists and share my vision for a more sustainable future powered by AI and IoT. I am grateful for the chance to contribute to this important dialogue and look forward to continuing to drive innovation in this space.
+0:["IHIalW0VQkBEGzoSckVyG",[[["",{"children":["events",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["events",{"children":["__PAGE__",{},[["$L1",["$","main",null,{"className":"flex min-h-screen flex-col items-center","children":["$","$L2",null,{"posts":[{"slug":"global-big-data-amsterdam","title":"Global Big Data Digital Transformation, Nov 2024, Amsterdam","summary":"Global Big Data Digital Transformation, Nov 2024, Amsterdam","author":"abde-bigdata","date":"2024-11-22 14:35:23 +0530","thumbnail":"/images/blog/2024-11-22-Global-Big-Data-and-Digital-Transformation-Forum/pic4.jpeg","keywords":["bigdata","ML","AI"],"content":"$3","readingTime":"2 min read"},{"slug":"pulitzer-europeanexecutiveforum","title":"European Executive Forum, 26th Feb 2024, Amsterdam The Netherlands","summary":"European Executive Forum, 26th Feb 2024, Amsterdam The Netherlands","author":"abde-pulitzer","date":"2024-02-26 14:35:23 +0530","thumbnail":"/images/blog/2023-10-26-Pulitzer-EuropeanExecutiveForum/pic1.jpg","keywords":["CyberSec","Strategy","Cloud","CTO","Executive",""],"content":"$4","readingTime":"2 min read"},{"slug":"telcos-workshop-morocco","title":"Telcos Workshop Morocco","summary":"$undefined","author":"$undefined","date":"2024-02-19","thumbnail":"$undefined","keywords":[],"content":"$5","readingTime":"2 min read"},{"slug":"mouratoglou-workshop","title":"Workshop Mouratoglou Hotel & Resort, Oct 13th-15th 2023 , France","summary":"Telco Workshop in Nice Sophia, Novotel","author":"abde-fortinet","date":"2023-10-05 14:35:23 +0530","thumbnail":"$undefined","keywords":["telco","5g","security",""],"content":"$6","readingTime":"2 min read"},{"slug":"telco-workshop-nice-france","title":"Workshop France Novotel, Nov 5th-7th 2024","summary":"Workshop France Novotel, Nov 5th-7th 2024","author":"abde-fortinet","date":"2023-10-05 14:35:23 +0530","thumbnail":"$undefined","keywords":["telco","5g","security",""],"content":"$7","readingTime":"2 min read"},{"slug":"ai-and-security-in-firanceandenergy","title":"AI and Security in Finance and Energy","summary":"Exploring AI applications in Finance and Energy sectors","author":"abde","date":"2023-06-05 14:35:23 +0530","thumbnail":"$undefined","keywords":["AI","Security","Finance","Energy"],"content":"$8","readingTime":"2 min read"}]}]}],null],null],null]},[null,["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children","events","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/792e337377e6d5ce.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_3a0388 dark","children":["$","body",null,{"children":[["$","$L9",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}],["$","$Lb",null,{}]]}]}]],null],null],["$Lc",null]]]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"abde.ai"}],["$","meta","3",{"name":"description","content":"A Portfolio template built with Next.js"}],["$","link","4",{"rel":"icon","href":"/swirl.svg"}],["$","meta","5",{"name":"next-size-adjust"}]]
+1:null

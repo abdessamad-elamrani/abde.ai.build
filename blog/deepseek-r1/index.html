@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en" class="__variable_3a0388 dark"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/e11418ac562b8ac1-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" as="image" href="/images/blog/25-jan-deepseek-opensource/DeepSeek-Logo.jpg"/><link rel="stylesheet" href="/_next/static/css/792e337377e6d5ce.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-1c4c9613b11f976f.js"/><script src="/_next/static/chunks/fb3ac5ec-bfaa8b56342c8d63.js" async=""></script><script src="/_next/static/chunks/673-b0ebc151530f75d8.js" async=""></script><script src="/_next/static/chunks/main-app-25f64b7f0a8b6680.js" async=""></script><script src="/_next/static/chunks/553-ab061d80f4220e9c.js" async=""></script><script src="/_next/static/chunks/app/layout-dcc69de85927c075.js" async=""></script><title>abde.ai</title><meta name="description" content="A Portfolio template built with Next.js"/><link rel="icon" href="/swirl.svg"/><meta name="next-size-adjust"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><article class="prose prose-lg prose-invert mx-auto max-w-3xl px-4 py-8"><div class="mb-8"><img src="/images/blog/25-jan-deepseek-opensource/DeepSeek-Logo.jpg" alt="OpenSource LLM? Really? (DeepSeek R1 example)" class="w-full max-h-[600px] object-contain rounded-lg"/></div><header class="mb-8"><h1 class="text-4xl font-bold mb-4 text-white">OpenSource LLM? Really? (DeepSeek R1 example)</h1><time class="text-gray-400">January 15, 2025</time></header><div class="prose-headings:font-bold prose-p:text-gray-300 prose-a:text-blue-400"><h1>Open Source LLM? Really? (DeepSeek R1 Example)</h1>
+<p><em>Simplified Edition</em></p>
+<h2>Open Source vs. Non-Open Source LLMs: Clearing Up the Confusion</h2>
+<p>The release of <strong>DeepSeek R1</strong> sparked excitement across the tech world. Some have called it “open source,” but the term can mean different things when it comes to Large Language Models (LLMs). Below, we break down what “open source” typically means in software, and how it looks a bit different in the LLM world.</p>
+<hr/>
+<h3>1. Traditional Open Source vs. “Open” LLMs</h3>
+<p><strong>In traditional open source software:</strong></p>
+<ul>
+<li>The <em>source code</em> is publicly available for viewing, modifying, and distributing.</li>
+<li>You can also see how it’s compiled and what dependencies it uses.</li>
+</ul>
+<p><strong>For “open source” LLMs:</strong></p>
+<ul>
+<li>Their <em>trained weights</em> might be publicly shared under a license that allows you to download, run, or fine-tune the model.</li>
+<li>However, the <em>training data</em> and training scripts are often kept private.</li>
+<li>Without that information, you can’t fully recreate or retrain the model from scratch.</li>
+</ul>
+<hr/>
+<h3>2. Why Having Just the Weights Isn’t Enough</h3>
+<ol>
+<li>
+<p><strong>Proprietary or Private Datasets</strong></p>
+<ul>
+<li>LLMs usually learn from massive datasets that might not be available publicly (due to licensing or NDAs).</li>
+<li>Simply having the final weights doesn’t reveal which data the model was trained on.</li>
+<li>This makes replicating or altering the original training process very difficult.</li>
+</ul>
+</li>
+<li>
+<p><strong>Training Software and Scripts</strong></p>
+<ul>
+<li>Organizations sometimes share only parts of the code used for training.</li>
+<li>The complete “recipe” (including special configs, distributed-training techniques, or hyperparameters) might be missing.</li>
+<li>Without those, recreating results is nearly impossible.</li>
+</ul>
+</li>
+<li>
+<p><strong>Infrastructure Requirements</strong></p>
+<ul>
+<li>Modern LLMs need powerful (and expensive) GPU clusters or specialized hardware to train.</li>
+<li>Even if you have the same data and code, you might not have the multi-million-dollar compute setup.</li>
+<li>This creates a major practical barrier for reproducing “open” models.</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<h3>3. The DeepSeek R1 Release and the “Open” Hype</h3>
+<p>DeepSeek R1 launched with lots of buzz and was labeled by some as an open-source LLM. In reality:</p>
+<ul>
+<li>The <strong>weights</strong> were shared under a permissive license.</li>
+<li>The <strong>training data</strong> is either under NDA or proprietary.</li>
+<li>The <strong>training details</strong> (like hyperparameters, custom code) remain undisclosed.</li>
+</ul>
+<p>Yes, you can download and fine-tune DeepSeek R1. But you can’t fully recreate its training or verify the exact steps that produced those weights. So it’s more accurate to call DeepSeek R1 a “model with openly available weights” rather than a completely open source project.</p>
+<hr/>
+<h3>4. Implications for the LLM Community</h3>
+<ol>
+<li>
+<p><strong>Innovation and Transparency</strong></p>
+<ul>
+<li>Released weights help developers build apps or fine-tune for their own needs.</li>
+<li>But hidden data selection or cleaning processes mean unseen biases might remain.</li>
+</ul>
+</li>
+<li>
+<p><strong>Reproducibility</strong></p>
+<ul>
+<li>True open source in machine learning would let others retrain and get similar results.</li>
+<li>Without full data, code, and environment details, that’s virtually impossible.</li>
+</ul>
+</li>
+<li>
+<p><strong>Commercial vs. Community</strong></p>
+<ul>
+<li>Companies may share parts of their model for community use or research while keeping key components private.</li>
+<li>Some academic/nonprofit labs aim for full transparency but usually face funding limits for large-scale training.</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<h3>5. How to Build (and Share) LLMs More Transparently</h3>
+<ol>
+<li>
+<p><strong>Provide <em>All</em> Training Artifacts</strong></p>
+<ul>
+<li>Share data sources (where possible), data preprocessing steps, and licensing details.</li>
+<li>Release the training scripts, hyperparameters, and environment configurations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Document the Infrastructure</strong></p>
+<ul>
+<li>Clearly describe the hardware setup, memory usage, and any unique system configurations.</li>
+<li>While it won’t solve cost issues, it at least helps others understand your approach.</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Clear Licensing</strong></p>
+<ul>
+<li>If it’s truly open source, use recognized licenses (e.g., Apache 2.0, MIT) that grant reuse and distribution rights.</li>
+<li>If there are restrictions (like research-only), be explicit.</li>
+</ul>
+</li>
+<li>
+<p><strong>Encourage Community Contributions</strong></p>
+<ul>
+<li>Permit users to view and modify training code.</li>
+<li>Offer discussion platforms (forums, GitHub issues) where people can give feedback or suggest improvements.</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<h3>6. Conclusion</h3>
+<p>Simply being able to download and run LLM weights doesn’t make a model “fully open source.” True openness involves sharing everything—training data, code, infrastructure details—so anyone can replicate or deeply modify the model.</p>
+<p>DeepSeek R1’s release is exciting, but we need to be clear on what “open” really means. By setting the right expectations, we keep AI research honest, transparent, and collaborative.</p></div></article><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events:none"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div><script src="/_next/static/chunks/webpack-1c4c9613b11f976f.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/media/e11418ac562b8ac1-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n2:HL[\"/_next/static/css/792e337377e6d5ce.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"3:I[8279,[],\"\"]\n6:I[3182,[],\"\"]\n8:I[7707,[],\"\"]\n9:I[2886,[\"553\",\"static/chunks/553-ab061d80f4220e9c.js\",\"185\",\"static/chunks/app/layout-dcc69de85927c075.js\"],\"Toaster\"]\nb:I[7244,[],\"\"]\n7:[\"slug\",\"deepseek-r1\",\"d\"]\nc:[]\n"])</script><script>self.__next_f.push([1,"0:[\"$\",\"$L3\",null,{\"buildId\":\"IHIalW0VQkBEGzoSckVyG\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"blog\",\"deepseek-r1\",\"\"],\"initialTree\":[\"\",{\"children\":[\"blog\",{\"children\":[[\"slug\",\"deepseek-r1\",\"d\"],{\"children\":[\"__PAGE__?{\\\"slug\\\":\\\"deepseek-r1\\\"}\",{}]}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"blog\",{\"children\":[[\"slug\",\"deepseek-r1\",\"d\"],{\"children\":[\"__PAGE__\",{},[[\"$L4\",\"$L5\",null],null],null]},[null,[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"blog\",\"children\",\"$7\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[null,[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"blog\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/792e337377e6d5ce.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"className\":\"__variable_3a0388 dark\",\"children\":[\"$\",\"body\",null,{\"children\":[[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[]}],[\"$\",\"$L9\",null,{}]]}]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$La\"],\"globalErrorComponent\":\"$b\",\"missingSlots\":\"$Wc\"}]\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"article\",null,{\"className\":\"prose prose-lg prose-invert mx-auto max-w-3xl px-4 py-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-8\",\"children\":[\"$\",\"img\",null,{\"src\":\"/images/blog/25-jan-deepseek-opensource/DeepSeek-Logo.jpg\",\"alt\":\"OpenSource LLM? Really? (DeepSeek R1 example)\",\"className\":\"w-full max-h-[600px] object-contain rounded-lg\"}]}],[\"$\",\"header\",null,{\"className\":\"mb-8\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"text-4xl font-bold mb-4 text-white\",\"children\":\"OpenSource LLM? Really? (DeepSeek R1 example)\"}],[\"$\",\"time\",null,{\"className\":\"text-gray-400\",\"children\":\"January 15, 2025\"}]]}],[\"$\",\"div\",null,{\"className\":\"prose-headings:font-bold prose-p:text-gray-300 prose-a:text-blue-400\",\"children\":\"$Ld\"}]]}]\na:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"abde.ai\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"A Portfolio template built with Next.js\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/swirl.svg\"}],[\"$\",\"meta\",\"5\",{\"name\":\"next-size-adjust\"}]]\n4:null\n"])</script><script>self.__next_f.push([1,"d:[[\"$\",\"h1\",null,{\"children\":\"Open Source LLM? Really? (DeepSeek R1 Example)\"}],\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"em\",null,{\"children\":\"Simplified Edition\"}]}],\"\\n\",[\"$\",\"h2\",null,{\"children\":\"Open Source vs. Non-Open Source LLMs: Clearing Up the Confusion\"}],\"\\n\",[\"$\",\"p\",null,{\"children\":[\"The release of \",[\"$\",\"strong\",null,{\"children\":\"DeepSeek R1\"}],\" sparked excitement across the tech world. Some have called it “open source,” but the term can mean different things when it comes to Large Language Models (LLMs). Below, we break down what “open source” typically means in software, and how it looks a bit different in the LLM world.\"]}],\"\\n\",[\"$\",\"hr\",null,{}],\"\\n\",[\"$\",\"h3\",null,{\"children\":\"1. Traditional Open Source vs. “Open” LLMs\"}],\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"In traditional open source software:\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":[\"The \",[\"$\",\"em\",null,{\"children\":\"source code\"}],\" is publicly available for viewing, modifying, and distributing.\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"You can also see how it’s compiled and what dependencies it uses.\"}],\"\\n\"]}],\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"For “open source” LLMs:\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":[\"Their \",[\"$\",\"em\",null,{\"children\":\"trained weights\"}],\" might be publicly shared under a license that allows you to download, run, or fine-tune the model.\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":[\"However, the \",[\"$\",\"em\",null,{\"children\":\"training data\"}],\" and training scripts are often kept private.\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"Without that information, you can’t fully recreate or retrain the model from scratch.\"}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",null,{}],\"\\n\",[\"$\",\"h3\",null,{\"children\":\"2. Why Having Just the Weights Isn’t Enough\"}],\"\\n\",[\"$\",\"ol\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":[\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"Proprietary or Private Datasets\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":\"LLMs usually learn from massive datasets that might not be available publicly (due to licensing or NDAs).\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"Simply having the final weights doesn’t reveal which data the model was trained on.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"This makes replicating or altering the original training process very difficult.\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":[\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"Training Software and Scripts\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":\"Organizations sometimes share only parts of the code used for training.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"The complete “recipe” (including special configs, distributed-training techniques, or hyperparameters) might be missing.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"Without those, recreating results is nearly impossible.\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":[\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"Infrastructure Requirements\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":\"Modern LLMs need powerful (and expensive) GPU clusters or specialized hardware to train.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"Even if you have the same data and code, you might not have the multi-million-dollar compute setup.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"This creates a major practical barrier for reproducing “open” models.\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",null,{}],\"\\n\",[\"$\",\"h3\",null,{\"children\":\"3. The DeepSeek R1 Release and the “Open” Hype\"}],\"\\n\",[\"$\",\"p\",null,{\"children\":\"DeepSeek R1 launched with lots of buzz and was labeled by some as an open-source LLM. In reality:\"}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":[\"The \",[\"$\",\"strong\",null,{\"children\":\"weights\"}],\" were shared under a permissive license.\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":[\"The \",[\"$\",\"strong\",null,{\"children\":\"training data\"}],\" is either under NDA or proprietary.\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":[\"The \",[\"$\",\"strong\",null,{\"children\":\"training details\"}],\" (like hyperparameters, custom code) remain undisclosed.\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"p\",null,{\"children\":\"Yes, you can download and fine-tune DeepSeek R1. But you can’t fully recreate its training or verify the exact steps that produced those weights. So it’s more accurate to call DeepSeek R1 a “model with openly available weights” rather than a completely open source project.\"}],\"\\n\",[\"$\",\"hr\",null,{}],\"\\n\",[\"$\",\"h3\",null,{\"children\":\"4. Implications for the LLM Community\"}],\"\\n\",[\"$\",\"ol\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":[\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"Innovation and Transparency\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":\"Released weights help developers build apps or fine-tune for their own needs.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"But hidden data selection or cleaning processes mean unseen biases might remain.\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":[\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"Reproducibility\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":\"True open source in machine learning would let others retrain and get similar results.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"Without full data, code, and environment details, that’s virtually impossible.\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":[\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"Commercial vs. Community\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":\"Companies may share parts of their model for community use or research while keeping key components private.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"Some academic/nonprofit labs aim for full transparency but usually face funding limits for large-scale training.\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",null,{}],\"\\n\",[\"$\",\"h3\",null,{\"children\":\"5. How to Build (and Share) LLMs More Transparently\"}],\"\\n\",[\"$\",\"ol\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":[\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":[\"Provide \",[\"$\",\"em\",null,{\"children\":\"All\"}],\" Training Artifacts\"]}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":\"Share data sources (where possible), data preprocessing steps, and licensing details.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"Release the training scripts, hyperparameters, and environment configurations.\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":[\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"Document the Infrastructure\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":\"Clearly describe the hardware setup, memory usage, and any unique system configurations.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"While it won’t solve cost issues, it at least helps others understand your approach.\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":[\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"Use Clear Licensing\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":\"If it’s truly open source, use recognized licenses (e.g., Apache 2.0, MIT) that grant reuse and distribution rights.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"If there are restrictions (like research-only), be explicit.\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"li\",null,{\"children\":[\"\\n\",[\"$\",\"p\",null,{\"children\":[\"$\",\"strong\",null,{\"children\":\"Encourage Community Contributions\"}]}],\"\\n\",[\"$\",\"ul\",null,{\"children\":[\"\\n\",[\"$\",\"li\",null,{\"children\":\"Permit users to view and modify training code.\"}],\"\\n\",[\"$\",\"li\",null,{\"children\":\"Offer discussion platforms (forums, GitHub issues) where people can give feedback or suggest improvements.\"}],\"\\n\"]}],\"\\n\"]}],\"\\n\"]}],\"\\n\",[\"$\",\"hr\",null,{}],\"\\n\",[\"$\",\"h3\",null,{\"children\":\"6. Conclusion\"}],\"\\n\",[\"$\",\"p\",null,{\"children\":\"Simply being able to download and run LLM weights doesn’t make a model “fully open source.” True openness involves sharing everything—training data, code, infrastructure details—so anyone can replicate or deeply modify the model.\"}],\"\\n\",[\"$\",\"p\",null,{\"children\":\"DeepSeek R1’s release is exciting, but we need to be clear on what “open” really means. By setting the right expectations, we keep AI research honest, transparent, and collaborative.\"}]]\n"])</script></body></html>
