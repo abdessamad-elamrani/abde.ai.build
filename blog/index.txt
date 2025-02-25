@@ -1,9 +1,10 @@
 3:I[4707,[],""]
 4:I[6423,[],""]
-5:I[3130,["698","static/chunks/698-79fc3d6f26cd610c.js","185","static/chunks/app/layout-d165903c1cab2e4f.js"],"Toaster"]
-0:["_f63FI2-IqK2YnBXr9HgE",[[["",{"children":["blog",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddea7f55ae105694.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_3a0388 dark","children":["$","body",null,{"children":[["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}],["$","$L5",null,{}]]}]}]],null],null],["$L6",null]]]]
-7:I[8050,["653","static/chunks/653-1394d479f7602a6d.js","648","static/chunks/648-815ca8e067aff87d.js","404","static/chunks/app/blog/page-0414002a842cff2a.js"],"BlogSection"]
-8:T12ed,
+5:I[827,["698","static/chunks/698-79fc3d6f26cd610c.js","743","static/chunks/743-860c26ffea13724f.js","185","static/chunks/app/layout-d0dfd085b60a0cf5.js"],"default"]
+6:I[7075,["698","static/chunks/698-79fc3d6f26cd610c.js","743","static/chunks/743-860c26ffea13724f.js","185","static/chunks/app/layout-d0dfd085b60a0cf5.js"],"Toaster"]
+0:["cnF5-5EUUHJaBI3_AxXmy",[[["",{"children":["blog",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b10aca7d102a835b.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_3a0388 dark","children":[["$","head",null,{}],["$","body",null,{"children":[["$","$L5",null,{}],["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}],["$","$L6",null,{}]]}]]}]],null],null],["$L7",null]]]]
+8:I[8050,["653","static/chunks/653-1394d479f7602a6d.js","648","static/chunks/648-815ca8e067aff87d.js","404","static/chunks/app/blog/page-0414002a842cff2a.js"],"BlogSection"]
+9:T12ed,
 
 # Open Source LLM? Really? (DeepSeek R1 Example)  
 *Simplified Edition*
@@ -98,7 +99,7 @@ Yes, you can download and fine-tune DeepSeek R1. But you can’t fully recreate 
 
 Simply being able to download and run LLM weights doesn’t make a model “fully open source.” True openness involves sharing everything—training data, code, infrastructure details—so anyone can replicate or deeply modify the model.
 
-DeepSeek R1’s release is exciting, but we need to be clear on what “open” really means. By setting the right expectations, we keep AI research honest, transparent, and collaborative.9:T84c,
+DeepSeek R1’s release is exciting, but we need to be clear on what “open” really means. By setting the right expectations, we keep AI research honest, transparent, and collaborative.a:T84c,
 
 
 `Event Recap: Big Data Digital Transformation Nov 2024, Amsterdam, The Netherlands `
@@ -131,7 +132,7 @@ I’m always excited to connect with like-minded professionals who share a passi
 *Interactive discussion with participants*
 
 ![Group Photo](/images/blog/2024-11-22-Global-Big-Data-and-Digital-Transformation-Forum/pic4.jpg)
-*Group photo with workshop participants*a:T793,
+*Group photo with workshop participants*b:T793,
 
 `Strategic & Technological Innovation: Navigating the Future of Cybersecurity`
 
@@ -152,7 +153,7 @@ Since this was top executives round table, for privacy reason I will not share p
 `Some pictures during the event`
 
 ![Discussion at Pulitzer Hotel](/images/blog/2023-10-26-Pulitzer-EuropeanExecutiveForum/Abdessamad_26102023_003.jpg)
-b:T94b,
+c:T94b,
 I'm happy to share about the amazing workshops we recently held in Morocco. My amazing colleague Kim Frellsen joined me as we met with teams from INWI and Orange, along with our great local Fortinet team. Together, we explored some really exciting developments in technology and security.
 
 ## 5G Security: Building a Safer Future
@@ -191,7 +192,7 @@ These workshops were about more than just sharing information - they were about 
 
 Thank you to everyone who helped make these workshops so successful, especially Youness Fikhar our main local SE in the telco market, Youssef Fouzi our great Morocco country manager, Mohammed El Kadiri, and all local Fortinet team. 
 
-Looking forward to our next collaboration!c:T64c,
+Looking forward to our next collaboration!d:T64c,
 
 
 I had the privilege of speaking at a our yearly SME event held at the Mouratoglou Hotel in Sophia Antipolis, France. 
@@ -210,7 +211,7 @@ I am grateful for the opportunity to have been part of such a dynamic and forwar
 ![netmap & dpdk and kernel recomplication](/images/blog/2023-10-18-Mouratoglou-workshop/Day1-Abde_2.jpeg)
 
 
-d:Tb30,
+e:Tb30,
 
 `Empowering Telco System Engineer Champions: Highlights from Our Annual Workshop`
 
@@ -249,7 +250,7 @@ This wasnt a one I gave directly, but I tried to actively participate and help a
 *More QoS internal flows*
 
 ![Leaving Nice Airport right before return flight, with my colleague Adel](/images/blog/2024-11-05-telco-workshop-nice-france/pic4.jpeg)
-*Leaving Nice Airport right before return flight, with my colleague Adel*e:T76e,
+*Leaving Nice Airport right before return flight, with my colleague Adel*f:T76e,
 
 # Digital Transformation in the Energy Sector Forum 2023
 
@@ -284,7 +285,7 @@ Furthermore, I addressed the energy dilemma associated with AI, emphasizing:
 - Green computing initiatives
 
 The event was a fantastic opportunity to connect with fellow technologists and share my vision for a more sustainable future powered by AI and IoT. I am grateful for the chance to contribute to this important dialogue and look forward to continuing to drive innovation in this space.
-f:Tc48,
+10:Tc48,
 
 # Quantum Computing Demystified: The Essential Math
 
@@ -360,7 +361,7 @@ Quantum computing isn’t “magic.” It’s math that looks magical until you 
 
 > “If you think you understand quantum mechanics, you don’t understand quantum mechanics.”  
 > — Richard Feynman  
-> *(But it still helps to learn the basics!)*10:Tf8f,
+> *(But it still helps to learn the basics!)*11:Tf8f,
 
 ## Introduction
 
@@ -432,6 +433,6 @@ Explore YaBilal-Standard or YaBilal-Plus at [YaBilal.nl](https://www.yabilal.nl/
 
 YaBilal is my personal passion project that captures all the phases of cutting-edge product development: PCB design, low-level MCU coding, AWS Cloud orchestration, and IoT integration. Whether you live in Europe, the US, or anywhere in between, I’m confident YaBilal can bring the exact Azan times you need right into your home.
 
-2:["$","main",null,{"className":"flex min-h-screen flex-col items-center","children":["$","$L7",null,{"posts":[{"slug":"deepseek-r1","title":"OpenSource LLM? Really? (DeepSeek R1 example)","summary":"DeepSeek R1 buzz:is it really OpenSource?","author":"abde","date":"2025-01-15 14:35:23 +0530","category":"tech","thumbnail":"/images/blog/25-jan-deepseek-opensource/DeepSeek-Logo.jpg","keywords":["CyberSec","TLS","ECH","Cloud","Quantum","Cryptography"],"content":"$8","readingTime":"4 min read","featured":false},{"slug":"global-big-data-amsterdam","title":"Global Big Data Digital Transformation, Nov 2024, Amsterdam","summary":"Global Big Data Digital Transformation, Nov 2024, Amsterdam","author":"abde-bigdata","date":"2024-11-22 14:35:23 +0530","category":"events","thumbnail":"/images/blog/2024-11-22-Global-Big-Data-and-Digital-Transformation-Forum/pic4.jpeg","keywords":["bigdata","ML","AI"],"content":"$9","readingTime":"2 min read","featured":false},{"slug":"pulitzer-europeanexecutiveforum","title":"European Executive Forum, 26th Feb 2024, Amsterdam The Netherlands","summary":"European Executive Forum, 26th Feb 2024, Amsterdam The Netherlands","author":"abde-pulitzer","date":"2024-02-26 14:35:23 +0530","category":"events","thumbnail":"/images/blog/2023-10-26-Pulitzer-EuropeanExecutiveForum/pic1.jpg","keywords":["CyberSec","Strategy","Cloud","CTO","Executive",""],"content":"$a","readingTime":"2 min read","featured":false},{"slug":"telcos-workshop-morocco","title":"Telcos Workshop Morocco","summary":"$undefined","author":"$undefined","date":"2024-02-19","category":"$undefined","thumbnail":"$undefined","keywords":[],"content":"$b","readingTime":"2 min read","featured":false},{"slug":"mouratoglou-workshop","title":"Workshop Mouratoglou Hotel & Resort, Oct 13th-15th 2023 , France","summary":"Telco Workshop in Nice Sophia, Novotel","author":"abde-fortinet","date":"2023-10-05 14:35:23 +0530","category":"events","thumbnail":"$undefined","keywords":["telco","5g","security",""],"content":"$c","readingTime":"2 min read","featured":false},{"slug":"telco-workshop-nice-france","title":"Workshop France Novotel, Nov 5th-7th 2024","summary":"Workshop France Novotel, Nov 5th-7th 2024","author":"abde-fortinet","date":"2023-10-05 14:35:23 +0530","category":"events","thumbnail":"$undefined","keywords":["telco","5g","security",""],"content":"$d","readingTime":"2 min read","featured":false},{"slug":"ai-and-security-in-firanceandenergy","title":"AI and Security in Finance and Energy","summary":"Exploring AI applications in Finance and Energy sectors","author":"abde","date":"2023-06-05 14:35:23 +0530","category":"tech","thumbnail":"$undefined","keywords":["AI","Security","Finance","Energy"],"content":"$e","readingTime":"2 min read","featured":false},{"slug":"quantum-and-cybersec","title":"The Math behind Quantum, in a nutchel","summary":"Cutting through the hype to explore the mathematics powering quantum computers","author":"abde","date":"2022-01-15 14:35:23 +0530","category":"tech","thumbnail":"/images/blog/2023-quantum/bits.jpg","keywords":["quantum computing","qubits","linear algebra","quantum gates"],"content":"$f","readingTime":"3 min read","featured":false},{"slug":"yabilal-iot","title":"YaBilal.nl:Combining PCB Design, MCU Coding, and AWS IoT","summary":"How I built a device that precisely matches mosque prayer times using cutting-edge tech","author":"abde","date":"2021-03-10 10:00:00 +0100","category":"tech","thumbnail":"/images/blog/2021-03-10-making-of-yabilal/yabilal-device.png","keywords":["Azan","PCB","3D design","MCU","AWS Cloud","IoT"],"content":"$10","readingTime":"3 min read","featured":false}]}]}]
-6:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"abde.ai"}],["$","meta","3",{"name":"description","content":"A Portfolio template built with Next.js"}],["$","link","4",{"rel":"icon","href":"/swirl.svg"}],["$","meta","5",{"name":"next-size-adjust"}]]
+2:["$","main",null,{"className":"flex min-h-screen flex-col items-center","children":["$","$L8",null,{"posts":[{"slug":"deepseek-r1","title":"OpenSource LLM? Really? (DeepSeek R1 example)","summary":"DeepSeek R1 buzz:is it really OpenSource?","author":"abde","date":"2025-01-15 14:35:23 +0530","category":"tech","thumbnail":"/images/blog/25-jan-deepseek-opensource/DeepSeek-Logo.jpg","keywords":["CyberSec","TLS","ECH","Cloud","Quantum","Cryptography"],"content":"$9","readingTime":"4 min read","featured":false},{"slug":"global-big-data-amsterdam","title":"Global Big Data Digital Transformation, Nov 2024, Amsterdam","summary":"Global Big Data Digital Transformation, Nov 2024, Amsterdam","author":"abde-bigdata","date":"2024-11-22 14:35:23 +0530","category":"events","thumbnail":"/images/blog/2024-11-22-Global-Big-Data-and-Digital-Transformation-Forum/pic4.jpeg","keywords":["bigdata","ML","AI"],"content":"$a","readingTime":"2 min read","featured":false},{"slug":"pulitzer-europeanexecutiveforum","title":"European Executive Forum, 26th Feb 2024, Amsterdam The Netherlands","summary":"European Executive Forum, 26th Feb 2024, Amsterdam The Netherlands","author":"abde-pulitzer","date":"2024-02-26 14:35:23 +0530","category":"events","thumbnail":"/images/blog/2023-10-26-Pulitzer-EuropeanExecutiveForum/pic1.jpg","keywords":["CyberSec","Strategy","Cloud","CTO","Executive",""],"content":"$b","readingTime":"2 min read","featured":false},{"slug":"telcos-workshop-morocco","title":"Telcos Workshop Morocco","summary":"$undefined","author":"$undefined","date":"2024-02-19","category":"$undefined","thumbnail":"$undefined","keywords":[],"content":"$c","readingTime":"2 min read","featured":false},{"slug":"mouratoglou-workshop","title":"Workshop Mouratoglou Hotel & Resort, Oct 13th-15th 2023 , France","summary":"Telco Workshop in Nice Sophia, Novotel","author":"abde-fortinet","date":"2023-10-05 14:35:23 +0530","category":"events","thumbnail":"$undefined","keywords":["telco","5g","security",""],"content":"$d","readingTime":"2 min read","featured":false},{"slug":"telco-workshop-nice-france","title":"Workshop France Novotel, Nov 5th-7th 2024","summary":"Workshop France Novotel, Nov 5th-7th 2024","author":"abde-fortinet","date":"2023-10-05 14:35:23 +0530","category":"events","thumbnail":"$undefined","keywords":["telco","5g","security",""],"content":"$e","readingTime":"2 min read","featured":false},{"slug":"ai-and-security-in-firanceandenergy","title":"AI and Security in Finance and Energy","summary":"Exploring AI applications in Finance and Energy sectors","author":"abde","date":"2023-06-05 14:35:23 +0530","category":"tech","thumbnail":"$undefined","keywords":["AI","Security","Finance","Energy"],"content":"$f","readingTime":"2 min read","featured":false},{"slug":"quantum-and-cybersec","title":"The Math behind Quantum, in a nutchel","summary":"Cutting through the hype to explore the mathematics powering quantum computers","author":"abde","date":"2022-01-15 14:35:23 +0530","category":"tech","thumbnail":"/images/blog/2023-quantum/bits.jpg","keywords":["quantum computing","qubits","linear algebra","quantum gates"],"content":"$10","readingTime":"3 min read","featured":false},{"slug":"yabilal-iot","title":"YaBilal.nl:Combining PCB Design, MCU Coding, and AWS IoT","summary":"How I built a device that precisely matches mosque prayer times using cutting-edge tech","author":"abde","date":"2021-03-10 10:00:00 +0100","category":"tech","thumbnail":"/images/blog/2021-03-10-making-of-yabilal/yabilal-device.png","keywords":["Azan","PCB","3D design","MCU","AWS Cloud","IoT"],"content":"$11","readingTime":"3 min read","featured":false}]}]}]
+7:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"abde.ai"}],["$","meta","3",{"name":"description","content":"A Portfolio template built with Next.js"}],["$","link","4",{"rel":"icon","href":"/swirl.svg"}],["$","meta","5",{"name":"next-size-adjust"}]]
 1:null
