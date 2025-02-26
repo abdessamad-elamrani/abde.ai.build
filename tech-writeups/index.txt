@@ -1,9 +1,34 @@
-2:I[2105,["653","static/chunks/653-9e7432602d1bd494.js","648","static/chunks/648-815ca8e067aff87d.js","861","static/chunks/app/tech-writeups/page-61d1d7914ed729b5.js"],"TechWriteupsSection"]
-6:I[4707,[],""]
-7:I[6423,[],""]
-8:I[827,["698","static/chunks/698-79fc3d6f26cd610c.js","743","static/chunks/743-860c26ffea13724f.js","185","static/chunks/app/layout-d0dfd085b60a0cf5.js"],"default"]
-9:I[7075,["698","static/chunks/698-79fc3d6f26cd610c.js","743","static/chunks/743-860c26ffea13724f.js","185","static/chunks/app/layout-d0dfd085b60a0cf5.js"],"Toaster"]
-3:T12ee,
+2:I[2105,["653","static/chunks/653-1394d479f7602a6d.js","648","static/chunks/648-815ca8e067aff87d.js","861","static/chunks/app/tech-writeups/page-61d1d7914ed729b5.js"],"TechWriteupsSection"]
+7:I[4707,[],""]
+8:I[6423,[],""]
+9:I[827,["698","static/chunks/698-79fc3d6f26cd610c.js","743","static/chunks/743-860c26ffea13724f.js","185","static/chunks/app/layout-d0dfd085b60a0cf5.js"],"default"]
+a:I[7075,["698","static/chunks/698-79fc3d6f26cd610c.js","743","static/chunks/743-860c26ffea13724f.js","185","static/chunks/app/layout-d0dfd085b60a0cf5.js"],"Toaster"]
+3:T98e,
+The AI world has exploded with new models, each claiming to be smarter or more creative than the last. However, most current benchmarks use static tests with predetermined answers, which too often reward memorization over genuine reasoning. It's a bit like taking a multiple-choice test for a subject that demands true problem solving and innovation.
+
+## The Problem with Traditional Benchmarks
+
+Platforms such as `Hugging Face`'s leaderboards and the HELM benchmark have become standard tools for comparing models. Unfortunately, these benchmarks come with limitations:
+- They are static, relying on fixed datasets.
+- They encourage models to overfit to known tests.
+- They measure performance on narrow skills rather than holistic intelligence.
+
+## A creative &  original way (Battleground)
+
+To address these issues, I built a platform where AI systems face off in dynamic challenges. In this system, models design their own problems and also verify each other's solutions. A solution is only accepted when both parties agree on its correctness. This method forces models to apply deeper reasoning instead of just reciting what they've learned.
+
+## Testing with Chess Challenges (coup de coeur)
+
+One fun twist is our incorporation of chess challenges. Since most language models aren’t pre-trained in chess, this test reveals how well they can apply reasoning in a new context. By prompting the AIs with chess principles, we tap into advanced techniques inspired by reinforcement learning—similar to the self-play strategy that revolutionized the game in [`AlphaZero`](https://deepmind.com/research/case-studies/alphazero).
+
+## Early Results and Future Prospects
+
+The initial battles have been both engaging and surprising. For example, our champion, `o3-mini-high`, has outperformed rivals such as deepseek-r1, grok3, and even sonnet3.7. This shows that the future of AI testing isn’t just about the amount of training data, but about creativity, adaptability, and true problem-solving skills.
+
+This platform represents a fresh approach to ranking AI models—one that emphasizes live, evolving challenges rather than static tests. To keep up with the latest exciting battles, visit [ai-battle.com](https://ai-battle.com) or check out my website at [abde.ai](https://abde.ai). Join me in exploring the future of AI, where every match is a fresh opportunity for innovation!
+
+Hit me up on my linkedin for more details or to join the fun!
+4:T12ee,
 
 # Open Source LLM? Really? (DeepSeek R1 Example)  
 *Simplified Edition*
@@ -99,7 +124,7 @@ Yes, you can download and fine-tune DeepSeek R1. But you can’t fully recreate 
 Simply being able to download and run LLM weights doesn’t make a model “fully open source.” True openness involves sharing everything—training data, code, infrastructure details—so anyone can replicate or deeply modify the model.
 
 DeepSeek R1’s release is exciting, but we need to be clear on what “open” really means. By setting the right expectations, we keep AI research honest, transparent, and collaborative.
-4:Tc49,
+5:Tc49,
 
 # Quantum Computing Demystified: The Essential Math
 
@@ -176,7 +201,7 @@ Quantum computing isn’t “magic.” It’s math that looks magical until you 
 > “If you think you understand quantum mechanics, you don’t understand quantum mechanics.”  
 > — Richard Feynman  
 > *(But it still helps to learn the basics!)*
-5:Tf8f,
+6:Tf8f,
 
 ## Introduction
 
@@ -248,6 +273,6 @@ Explore YaBilal-Standard or YaBilal-Plus at [YaBilal.nl](https://www.yabilal.nl/
 
 YaBilal is my personal passion project that captures all the phases of cutting-edge product development: PCB design, low-level MCU coding, AWS Cloud orchestration, and IoT integration. Whether you live in Europe, the US, or anywhere in between, I’m confident YaBilal can bring the exact Azan times you need right into your home.
 
-0:["DgFTChkngny_UerpEhHCc",[[["",{"children":["tech-writeups",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["tech-writeups",{"children":["__PAGE__",{},[["$L1",["$","main",null,{"className":"flex min-h-screen flex-col items-center","children":["$","$L2",null,{"posts":[{"slug":"deepseek-r1","title":"OpenSource LLM? Really? (DeepSeek R1 example)","summary":"DeepSeek R1 buzz:is it really OpenSource?","author":"abde","date":"2025-01-15 14:35:23 +0530","thumbnail":"/images/blog/25-jan-deepseek-opensource/DeepSeek-Logo.jpg","keywords":["CyberSec","TLS","ECH","Cloud","Quantum","Cryptography"],"content":"$3","readingTime":"4 min read"},{"slug":"quantum-and-cybersec","title":"The Math behind Quantum, in a nutchel","summary":"Cutting through the hype to explore the mathematics powering quantum computers","author":"abde","date":"2022-01-15 14:35:23 +0530","thumbnail":"/images/blog/2023-quantum/bits.jpg","keywords":["quantum computing","qubits","linear algebra","quantum gates"],"content":"$4","readingTime":"3 min read"},{"slug":"yabilal-iot","title":"YaBilal.nl:Combining PCB Design, MCU Coding, and AWS IoT","summary":"How I built a device that precisely matches mosque prayer times using cutting-edge tech","author":"abde","date":"2021-03-10 10:00:00 +0100","thumbnail":"/images/blog/2021-03-10-making-of-yabilal/yabilal-device.png","keywords":["Azan","PCB","3D design","MCU","AWS Cloud","IoT"],"content":"$5","readingTime":"3 min read"}]}]}],null],null],null]},[null,["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children","tech-writeups","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b10aca7d102a835b.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_3a0388 dark","children":[["$","head",null,{}],["$","body",null,{"children":[["$","$L8",null,{}],["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}],["$","$L9",null,{}]]}]]}]],null],null],["$La",null]]]]
-a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"abde.ai"}],["$","meta","3",{"name":"description","content":"Abde Elamrani , CyberSec Animations, Tech Writeups, AI & ML battles, Chess & more"}],["$","link","4",{"rel":"icon","href":"/swirl.svg"}],["$","meta","5",{"name":"next-size-adjust"}]]
+0:["BYmDZOPEbWqhVi0PZ2GxS",[[["",{"children":["tech-writeups",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["tech-writeups",{"children":["__PAGE__",{},[["$L1",["$","main",null,{"className":"flex min-h-screen flex-col items-center","children":["$","$L2",null,{"posts":[{"slug":"ai-ranking-flawed","title":"Rethinking AI Competitions: Let the Battles Begin!","summary":"A critical analysis of current AI model benchmarking approaches and why they fail to capture true capabilities","author":"abde","date":"2025-02-20 09:30:00 +0100","thumbnail":"/images/blog/ai-battle.png","keywords":["AI","Benchmarking","LLM Evaluation","Model Ranking","AI Research","Performance Metrics"],"content":"$3","readingTime":"2 min read"},{"slug":"deepseek-r1","title":"OpenSource LLM? Really? (DeepSeek R1 example)","summary":"DeepSeek R1 buzz:is it really OpenSource?","author":"abde","date":"2025-01-15 14:35:23 +0530","thumbnail":"/images/blog/25-jan-deepseek-opensource/DeepSeek-Logo.jpg","keywords":["CyberSec","TLS","ECH","Cloud","Quantum","Cryptography"],"content":"$4","readingTime":"4 min read"},{"slug":"quantum-and-cybersec","title":"The Math behind Quantum, in a nutchel","summary":"Cutting through the hype to explore the mathematics powering quantum computers","author":"abde","date":"2022-01-15 14:35:23 +0530","thumbnail":"/images/blog/2023-quantum/bits.jpg","keywords":["quantum computing","qubits","linear algebra","quantum gates"],"content":"$5","readingTime":"3 min read"},{"slug":"yabilal-iot","title":"YaBilal.nl:Combining PCB Design, MCU Coding, and AWS IoT","summary":"How I built a device that precisely matches mosque prayer times using cutting-edge tech","author":"abde","date":"2021-03-10 10:00:00 +0100","thumbnail":"/images/blog/2021-03-10-making-of-yabilal/yabilal-device.png","keywords":["Azan","PCB","3D design","MCU","AWS Cloud","IoT"],"content":"$6","readingTime":"3 min read"}]}]}],null],null],null]},[null,["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","tech-writeups","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b10aca7d102a835b.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_3a0388 dark","children":[["$","head",null,{}],["$","body",null,{"children":[["$","$L9",null,{}],["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}],["$","$La",null,{}]]}]]}]],null],null],["$Lb",null]]]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"abde.ai"}],["$","meta","3",{"name":"description","content":"Abde Elamrani , CyberSec Animations, Tech Writeups, AI & ML battles, Chess & more"}],["$","link","4",{"rel":"icon","href":"/swirl.svg"}],["$","meta","5",{"name":"next-size-adjust"}]]
 1:null
