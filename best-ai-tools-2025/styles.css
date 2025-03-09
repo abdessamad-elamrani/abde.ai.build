@@ -1,0 +1,807 @@
+/* 
+ * AI Tools: From Zero to Hero
+ * Main Stylesheet
+ */
+
+/* ===== VARIABLES ===== */
+:root {
+  /* Category colors */
+  --chatbots-color: #4285F4;
+  --video-color: #F44336;
+  --notetakers-color: #34A853;
+  --research-color: #9C27B0;
+  --writing-color: #FF9800;
+  --grammar-color: #3F51B5;
+  --search-color: #00BCD4;
+  --social-color: #EA4335;
+  --image-color: #673AB7;
+  --design-color: #FF5722;
+  --coding-color: #2196F3;
+  --project-color: #009688;
+  --scheduling-color: #795548;
+  --customer-color: #607D8B;
+  --recruitment-color: #E91E63;
+  --knowledge-color: #8BC34A;
+  --email-color: #FFEB3B;
+  --presentations-color: #FF4081;
+  --resume-color: #9E9E9E;
+  --voice-color: #CDDC39;
+  
+  /* Level background colors */
+  --beginner-bg: rgba(232, 245, 233, 0.95);  /* Light green background */
+  --intermediate-bg: rgba(255, 243, 224, 0.95);  /* Light orange background */
+  --expert-bg: rgba(255, 235, 238, 0.95);  /* Light red background */
+  --all-levels-bg: rgba(240, 240, 240, 0.95);  /* Light gray background */
+  
+  /* Level-specific colors */
+  --beginner-color: #4CAF50;     /* Green */
+  --intermediate-color: #FF9800; /* Orange (changed from blue) */
+  --expert-color: #FF5722;       /* Deep Orange */
+  
+  /* Section colors */
+  --engineering-color: #2196F3;  /* Blue */
+  --business-color: #4CAF50;     /* Green */
+  --content-color: #FF9800;      /* Orange */
+  --science-color: #9C27B0;      /* Purple */
+  
+  /* Neutral colors */
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #eeeeee;
+  --neutral-300: #e0e0e0;
+  --neutral-400: #bdbdbd;
+  --neutral-500: #9e9e9e;
+  --neutral-600: #757575;
+  --neutral-700: #616161;
+  --neutral-800: #424242;
+  --neutral-900: #212121;
+}
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  color: var(--neutral-900);
+  background-color: var(--neutral-100);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  color: white;
+}
+
+#chart {
+  width: 100%;
+  padding: 8px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section row */
+.section-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.section-row:last-child {
+  margin-bottom: 0;
+}
+
+.section-row .diagram-container {
+  flex: 1;
+  width: 50%;
+  min-width: 0;
+}
+
+/* Diagram container */
+.diagram-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--neutral-200);
+  width: 100%;
+  min-width: 0;
+}
+
+/* Section header */
+.section-header {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--neutral-200);
+  background-color: var(--neutral-50);
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+/* Engineering section styling */
+#engineering-section .section-header {
+  border-top: 4px solid var(--engineering-color);
+}
+
+/* Business section styling */
+#business-section .section-header {
+  border-top: 4px solid var(--business-color);
+}
+
+/* Content section styling */
+#content-section .section-header {
+  border-top: 4px solid var(--content-color);
+}
+
+/* Science section styling */
+#science-section .section-header {
+  border-top: 4px solid var(--science-color);
+}
+
+/* Fields container */
+.fields-container {
+  display: flex;
+  padding: 6px;
+  gap: 6px;
+  overflow-x: auto;
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Field column */
+.field-column {
+  flex: 1;
+  min-width: 180px;
+  margin: 0 2px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--neutral-50);
+}
+
+/* Field header */
+.field-header {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  background-color: white;
+  border-bottom: 1px solid var(--neutral-200);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--neutral-800);
+}
+
+.field-icon {
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+
+/* Level sections */
+.level-section {
+  padding: 5px;
+  border-bottom: 1px solid var(--neutral-100);
+}
+
+/* Tool items */
+.tool-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background-color: white;
+  border: 1px solid var(--neutral-200);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tool-item:hover {
+  border-color: var(--neutral-300);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+  z-index: 20;
+}
+
+.tool-item:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Tool icon */
+.tool-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  border-radius: 4px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure logos don't overflow */
+}
+
+/* Tool icon with custom logo */
+.tool-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Tool icon with custom logo - white background */
+.tool-icon.custom-logo-container {
+  background-color: white;
+}
+
+/* Tool icon colors based on section */
+#engineering-section .tool-icon {
+  background-color: var(--engineering-color);
+}
+
+#business-section .tool-icon {
+  background-color: var(--business-color);
+}
+
+#content-section .tool-icon {
+  background-color: var(--content-color);
+}
+
+#science-section .tool-icon {
+  background-color: var(--science-color);
+}
+
+/* Tool content */
+.tool-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-right: 32px; /* Make room for the badge */
+}
+
+.tool-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--neutral-900);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 5px;
+}
+
+/* Tool description */
+.tool-desc {
+  font-size: 0.8rem;
+  color: var(--neutral-700);
+  margin-bottom: 3px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tool link */
+.tool-link {
+  font-size: 0.75rem;
+  margin-top: auto;
+}
+
+.tool-link a {
+  color: #2196F3; /* Bright blue color */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.tool-link a:hover {
+  color: #0D47A1; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Tool score badge */
+.tool-score-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
+  margin-left: auto;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  margin-right: 4px;
+}
+
+.tool-score-badge.excellent {
+  background: linear-gradient(135deg, #2979ff, #448aff);
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.6);
+}
+
+.tool-score-badge.excellent::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+
+.tool-score-badge.good {
+  background: linear-gradient(135deg, #43a047, #66bb6a);
+}
+
+.tool-score-badge.average {
+  background: linear-gradient(135deg, #fb8c00, #ffa726);
+}
+
+.tool-score-badge.poor {
+  background: linear-gradient(135deg, #e53935, #ef5350);
+}
+
+/* Hover content */
+.tool-hover-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid var(--neutral-300);
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  z-index: 30;
+  display: none;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.tool-item:hover .tool-hover-content {
+  display: block;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+/* Detailed description */
+.tool-detailed-desc {
+  margin: 8px 0;
+  font-size: 0.75rem;
+  color: var(--neutral-700);
+  line-height: 1.4;
+}
+
+.tool-detailed-desc p {
+  margin-bottom: 6px;
+}
+
+/* Tool scores */
+.tool-scores {
+  margin: 8px 0;
+}
+
+.tool-paid-status {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--neutral-800);
+}
+
+.pricing-value {
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+/* Score bars */
+.score-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.score-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score-label {
+  width: 80px;
+  font-size: 0.85rem;
+  color: var(--neutral-700);
+}
+
+.score-track {
+  flex-grow: 1;
+  height: 8px;
+  background-color: var(--neutral-200);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.score-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Score color based on value */
+.score-fill.excellent {
+  background: linear-gradient(90deg, #2979ff, #448aff);
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+  animation: pulse 2s infinite;
+}
+
+.score-fill.good {
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+}
+
+.score-fill.average {
+  background: linear-gradient(90deg, #fb8c00, #ffa726);
+}
+
+.score-fill.poor {
+  background: linear-gradient(90deg, #e53935, #ef5350);
+}
+
+/* Shine effect for excellent scores */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+  }
+}
+
+.score-fill.excellent::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+.score-value {
+  width: 35px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+/* Score value color based on score */
+.score-value.excellent {
+  color: #2979ff;
+}
+
+.score-value.good {
+  color: #43a047;
+}
+
+.score-value.average {
+  color: #fb8c00;
+}
+
+.score-value.poor {
+  color: #e53935;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { 
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.tool-item:nth-child(1) { animation-delay: 0.1s; }
+.tool-item:nth-child(2) { animation-delay: 0.2s; }
+.tool-item:nth-child(3) { animation-delay: 0.3s; }
+.tool-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1400px) {
+  .field-column {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-row {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .field-column {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .section-row .diagram-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #chart {
+    padding: 8px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .fields-container {
+    padding: 6px;
+  }
+  
+  .field-header {
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .field-column {
+    min-width: 100%;
+  }
+  
+  .tool-hover-content {
+    position: static;
+    margin-top: 6px;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+/* Hide notification banner and progress container */
+.notification-banner,
+#close-banner,
+.progress-container,
+.progress-track,
+.progress-indicator {
+  display: none !important;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  body {
+    background: white;
+  }
+  
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #chart {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .level-section {
+    height: auto;
+    page-break-inside: avoid;
+  }
+}
+
+/* Show more button */
+.show-more-btn {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  margin-top: 6px;
+  background-color: #f0f8ff; /* Light blue background */
+  border: 1px solid #2196F3; /* Blue border */
+  border-radius: 4px;
+  color: #2196F3; /* Blue text */
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.show-more-btn:hover {
+  background-color: #e3f2fd; /* Slightly darker blue on hover */
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.2);
+}
+
+/* Additional optimizations to reduce vertical space */
+.tool-item:last-child {
+  margin-bottom: 0;
+}
+
+.level-section:last-child {
+  border-bottom: none;
+}
+
+/* ===== MEDIA QUERIES ===== */
+/* These help ensure the layout works at different zoom levels */
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  #chart {
+    width: 100%;
+  }
+  
+  .section-row {
+    width: 100%;
+  }
+  
+  .diagram-container {
+    width: 100%;
+  }
+  
+  .fields-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  #chart {
+    width: 100%;
+  }
+  
+  .section-row {
+    width: 100%;
+  }
+  
+  .diagram-container {
+    width: 100%;
+  }
+  
+  .fields-container {
+    width: 100%;
+  }
+}
+
+/* Ensure field columns maintain minimum width but also flex properly */
+@media screen and (max-width: 768px) {
+  .field-column {
+    min-width: 160px;
+  }
+}
+
+/* Average score bar styling */
+.score-bar:last-child {
+  margin-top: 5px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--neutral-200);
+}
+
+.score-bar:last-child .score-label {
+  font-weight: 600;
+}
+
+.score-bar:last-child .score-value {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.score-bar:last-child .score-track {
+  height: 10px;
+}
+
+.score-bar:last-child .score-fill {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.score-bar:last-child .score-fill.excellent {
+  background: linear-gradient(90deg, #1565C0, #2979FF);
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.7);
+}
+
+/* Score note and formula */
+.score-note, .score-formula {
+  font-size: 0.7rem;
+  color: var(--neutral-500);
+  font-style: italic;
+  margin-left: 8px;
+  display: block;
+  margin-top: 2px;
+}
+
+.score-formula {
+  font-size: 0.65rem;
+}
+
+/* Hidden score badge */
+.tool-score-badge-hidden {
+  display: none !important;
+} 
