@@ -811,7 +811,7 @@ const scienceLiteratureData = [
               popularity: 8,
               complexity: 3
             },
-            paidStatus: "Free tier; Pro plan (EUR7/month).",
+            paidStatus: "Free tier; Pro plan (€7/month).",
             detailedDescription: "DeepL provides highly accurate translations between multiple languages. It's known for preserving the tone and nuance of the original text better than many other translation services."
           },
           {
@@ -876,76 +876,3 @@ const engineeringLevelNames = ["Engineering & Technical"];
 const businessLevelNames = ["Business & Productivity"];
 const contentLevelNames = ["Content & Media"];
 const scienceLevelNames = ["Science & Literature"]; 
-
-// Export data to global scope with sanitization
-try {
-  // First verify data structure by converting to JSON and back
-  // This will help identify and throw errors for malformed data early
-  function sanitizeData(data) {
-    try {
-      // First, safely handle special characters
-      const prepareJson = (obj) => {
-        return JSON.stringify(obj)
-          .replace(/€/g, "EUR")  // Replace Euro symbol with EUR
-          .replace(/[^\x00-\x7F]/g, match => {
-            console.log("Replacing special character:", match);
-            return encodeURIComponent(match);
-          });
-      };
-      
-      // Convert object to string with special character handling
-      const jsonString = prepareJson(data);
-      
-      // Log info for debugging
-      console.log("Data sanitization check passed");
-      
-      // Parse the string back to object
-      try {
-        return JSON.parse(jsonString);
-      } catch (jsonError) {
-        console.error("JSON validation error:", jsonError);
-        
-        // Try to identify position of error in a large string
-        if (jsonError.message.includes("position")) {
-          const match = jsonError.message.match(/position (\d+)/);
-          if (match && match[1]) {
-            const pos = parseInt(match[1]);
-            const startPos = Math.max(0, pos-30);
-            const endPos = pos+30;
-            console.error(`Error near position ${pos}. Context: '${jsonString.substring(startPos, endPos)}'`);
-            // Also show character code
-            console.error(`Character at position ${pos}: '${jsonString.charAt(pos)}' (charCode: ${jsonString.charCodeAt(pos)})`);
-          }
-        }
-        
-        // Return a simplified version of the data to avoid breaking the app
-        return { error: true, message: jsonError.message };
-      }
-    } catch (error) {
-      console.error("Error in sanitizeData:", error);
-      return { error: true, message: String(error) };
-    }
-  }
-
-  // Sanitize and assign each data object
-  window.engineeringTechnicalData = sanitizeData(engineeringTechnicalData);
-  window.businessProductivityData = sanitizeData(businessProductivityData);
-  window.contentMediaData = sanitizeData(contentMediaData);
-  window.scienceLiteratureData = sanitizeData(scienceLiteratureData);
-  
-  // Assign level names directly as they're simple arrays
-  window.engineeringLevelNames = engineeringLevelNames;
-  window.businessLevelNames = businessLevelNames;
-  window.contentLevelNames = contentLevelNames;
-  window.scienceLevelNames = scienceLevelNames;
-  
-  console.log("Data.js: Successfully loaded, validated, and assigned data to window object");
-} catch (error) {
-  console.error("Error in data.js while processing data:", error);
-  
-  // Set fallback data if there's an error
-  window.engineeringTechnicalData = [{field: "Error", icon: "⚠️", levels: [{name: "Error", tools: [{name: "Data Error", description: "There was an error loading the data. Please refresh or contact support.", icon: "fa-solid fa-exclamation-triangle"}]}]}];
-  window.businessProductivityData = window.engineeringTechnicalData;
-  window.contentMediaData = window.engineeringTechnicalData;
-  window.scienceLiteratureData = window.engineeringTechnicalData;
-} 
