@@ -2,19 +2,82 @@
   <script>
     // Add this event listener to ensure data.js is loaded in the iframe context
     window.addEventListener('load', function() {
-      const iframe = document.querySelector('iframe[src="/best-ai-tools-2025/index.html"]');
-      if (iframe && iframe.contentWindow) {
-        // Ensure iframe has fully loaded
-        iframe.onload = function() {
-          console.log("Iframe loaded, checking for data.js");
-          const script = document.createElement('script');
-          script.src = "/best-ai-tools-2025/data.js";
-          script.onload = function() {
-            console.log("data.js successfully injected into iframe");
-          };
-          iframe.contentDocument.head.appendChild(script);
-        };
+      // Function to load data.js in the iframe
+      function loadDataIntoIframe() {
+        const iframe = document.querySelector('iframe[src="/best-ai-tools-2025/index.html"]');
+        if (!iframe) {
+          console.error('AI Tools iframe not found');
+          return;
+        }
+        
+        // Method 1: Try to inject the script directly
+        try {
+          iframe.addEventListener('load', function() {
+            try {
+              console.log("Iframe loaded, injecting data.js");
+              
+              // First ensure the document is accessible
+              if (!iframe.contentDocument || !iframe.contentWindow) {
+                throw new Error('Cannot access iframe content - possible CORS issue');
+              }
+              
+              // Create and inject the script
+              const script = document.createElement('script');
+              script.src = "/best-ai-tools-2025/data.js";
+              script.onerror = function(e) {
+                console.error("Error loading data.js:", e);
+                // Try alternate loading method
+                loadDataViaMessage();
+              };
+              script.onload = function() {
+                console.log("data.js successfully injected");
+                // Verify data loaded correctly
+                if (typeof iframe.contentWindow.engineeringTechnicalData === 'undefined') {
+                  console.warn("Data variables not found, trying alternate method");
+                  loadDataViaMessage();
+                }
+              };
+              iframe.contentDocument.head.appendChild(script);
+            } catch (e) {
+              console.error("Error in iframe script injection:", e);
+              // Try alternate method
+              loadDataViaMessage();
+            }
+          }, { once: true });
+          
+          // Force reload iframe if needed
+          if (iframe.contentDocument && iframe.contentDocument.readyState === 'complete') {
+            // The iframe is already loaded, manually trigger load event
+            const loadEvent = new Event('load');
+            iframe.dispatchEvent(loadEvent);
+          }
+        } catch (e) {
+          console.error("Error setting up iframe load listener:", e);
+        }
       }
+      
+      // Alternate method: Use postMessage to communicate
+      function loadDataViaMessage() {
+        const iframe = document.querySelector('iframe[src="/best-ai-tools-2025/index.html"]');
+        if (!iframe || !iframe.contentWindow) return;
+        
+        // Let the iframe know it should load data.js
+        iframe.contentWindow.postMessage({ type: 'loadData', path: '/best-ai-tools-2025/data.js' }, '*');
+      }
+      
+      // Start the process
+      loadDataIntoIframe();
+      
+      // Add a backup timeout in case the iframe load event doesn't fire
+      setTimeout(function() {
+        const iframe = document.querySelector('iframe[src="/best-ai-tools-2025/index.html"]');
+        if (iframe && iframe.contentWindow && 
+            (!iframe.contentWindow.engineeringTechnicalData || 
+             !iframe.contentWindow.contentMediaData)) {
+          console.warn("Data not loaded after timeout, trying again");
+          loadDataIntoIframe();
+        }
+      }, 3000);
     });
   </script>
   <iframe src="/best-ai-tools-2025/index.html" class="w-full h-[calc(100vh-150px)] min-h-[800px] border-0 overflow-visible" style="width: 100%; max-width: 100%;" title="Best AI Tools 2025"></iframe>
