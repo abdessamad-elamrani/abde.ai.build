@@ -42,35 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
       container.style.width = '100%';
     });
     
-    // Force horizontal layout for fields containers
+    // Make sure all fields containers use full width
     document.querySelectorAll('.fields-container').forEach(container => {
-      Object.assign(container.style, {
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'nowrap',
-        overflowX: 'auto',
-        width: '100%',
-        gap: '1rem'
-      });
-    });
-    
-    // Force fixed width for field columns
-    document.querySelectorAll('.field-column').forEach(column => {
-      Object.assign(column.style, {
-        flex: '0 0 250px',
-        minWidth: '250px',
-        width: '250px',
-        display: 'block',
-        marginRight: '1rem'
-      });
-      
-      // Check if we're on a very small screen
-      if (window.innerWidth <= 480) {
-        Object.assign(column.style, {
-          flex: '1 0 100%',
-          width: '100%'
-        });
-      }
+      container.style.width = '100%';
     });
   }
 
@@ -101,25 +75,16 @@ document.addEventListener('DOMContentLoaded', function() {
    * Create the fields container with all field columns
    */
   function createFieldsContainer(chart, dataSet) {
-    // Create container with explicit horizontal layout
     const fieldsContainer = chart.append("div")
       .attr("class", "fields-container")
-      .style("width", "100%")
-      .style("display", "flex")
-      .style("flex-direction", "row")
-      .style("flex-wrap", "nowrap")
-      .style("overflow-x", "auto");
+      .style("width", "100%"); // Ensure full width
 
-    // Create horizontal field columns with fixed width
+    // Create vertical field columns
     const fieldColumns = fieldsContainer.selectAll(".field-column")
       .data(dataSet)
       .enter()
       .append("div")
-      .attr("class", d => `field-column ${d.cssClass}`)
-      .style("flex", "0 0 250px")
-      .style("min-width", "250px")
-      .style("width", "250px")
-      .style("margin-right", "1rem");
+      .attr("class", d => `field-column ${d.cssClass}`);
 
     // Add field headers
     fieldColumns.append("div")
@@ -131,9 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add animation to field columns
     animateFieldColumns(fieldColumns);
-    
-    // Return the field columns for further processing
-    return fieldColumns;
   }
 
   /**
@@ -242,40 +204,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return '';
       });
       
-    // Add score badge if scores exist and showScoreBadge is not false
-    toolInfo.append("div")
-      .attr("class", d => {
-        // Don't show score badge if explicitly set to false
-        if (d.showScoreBadge === false) return "tool-score-badge-hidden";
-        if (!d.scores) return "tool-score-badge-placeholder";
-        
-        // Calculate weighted score with complexity inverted (lower is better)
-        // Formula: (Quality*0.4 + Popularity*0.4 + (11-Complexity)*0.2)
-        const invertedComplexity = 11 - d.scores.complexity; // Invert complexity (1-10 scale becomes 10-1)
-        const weightedScore = (d.scores.education * 0.4) + (d.scores.popularity * 0.4) + (invertedComplexity * 0.2);
-        
-        // Determine score class
-        let scoreClass = 'poor';
-        if (weightedScore >= 8.5) scoreClass = 'excellent';
-        else if (weightedScore >= 7) scoreClass = 'good';
-        else if (weightedScore >= 6) scoreClass = 'average';
-        
-        return `tool-score-badge ${scoreClass}`;
-      })
-      .html(d => {
-        // Don't show score badge if explicitly set to false
-        if (d.showScoreBadge === false || !d.scores) return '';
-        
-        // Calculate weighted score with complexity inverted
-        const invertedComplexity = 11 - d.scores.complexity;
-        const weightedScore = (d.scores.education * 0.4) + (d.scores.popularity * 0.4) + (invertedComplexity * 0.2);
-        return weightedScore.toFixed(1);
-      })
-      .style("position", "absolute")
-      .style("top", "8px")
-      .style("right", "4px")
-      .style("display", d => d.showScoreBadge === false ? "none" : "flex");
-      
     // Add hover content container (hidden by default, shown on hover)
     const hoverContent = toolItems.append("div")
       .attr("class", "tool-hover-content");
@@ -300,57 +228,28 @@ document.addEventListener('DOMContentLoaded', function() {
       .attr("class", "tool-scores")
       .html(d => {
         if (d.scores) {
-          // Helper function to determine score class based on value
-          const getScoreClass = (score) => {
-            if (score >= 8.5) return 'excellent';
-            if (score >= 7) return 'good';
-            if (score >= 6) return 'average';
-            return 'poor';
-          };
-          
-          // Create score bars with appropriate classes
-          const qualityClass = getScoreClass(d.scores.education);
-          const popularityClass = getScoreClass(d.scores.popularity);
-          
-          // For complexity, lower is better, so invert the score for display
-          const invertedComplexity = 11 - d.scores.complexity;
-          const complexityClass = getScoreClass(invertedComplexity);
-          
-          // Calculate weighted score using the same formula as the badge
-          const weightedScore = (d.scores.education * 0.4) + (d.scores.popularity * 0.4) + (invertedComplexity * 0.2);
-          const weightedScoreClass = getScoreClass(weightedScore);
-          
           return `
             <div class="score-bars">
               <div class="score-bar">
-                <span class="score-label">Quality</span>
+                <span class="score-label">Education</span>
                 <div class="score-track">
-                  <div class="score-fill ${qualityClass}" style="width: ${d.scores.education * 10}%"></div>
+                  <div class="score-fill education" style="width: ${d.scores.education * 10}%"></div>
                 </div>
-                <span class="score-value ${qualityClass}">${d.scores.education}/10</span>
+                <span class="score-value">${d.scores.education}/10</span>
               </div>
               <div class="score-bar">
                 <span class="score-label">Popularity</span>
                 <div class="score-track">
-                  <div class="score-fill ${popularityClass}" style="width: ${d.scores.popularity * 10}%"></div>
+                  <div class="score-fill popularity" style="width: ${d.scores.popularity * 10}%"></div>
                 </div>
-                <span class="score-value ${popularityClass}">${d.scores.popularity}/10</span>
+                <span class="score-value">${d.scores.popularity}/10</span>
               </div>
               <div class="score-bar">
-                <span class="score-label">Simplicity</span>
+                <span class="score-label">Complexity</span>
                 <div class="score-track">
-                  <div class="score-fill ${complexityClass}" style="width: ${invertedComplexity * 10}%"></div>
+                  <div class="score-fill complexity" style="width: ${d.scores.complexity * 10}%"></div>
                 </div>
-                <span class="score-value ${complexityClass}">${invertedComplexity}/10</span>
-                <span class="score-note">(lower complexity is better)</span>
-              </div>
-              <div class="score-bar">
-                <span class="score-label">Overall</span>
-                <div class="score-track">
-                  <div class="score-fill ${weightedScoreClass}" style="width: ${weightedScore * 10}%"></div>
-                </div>
-                <span class="score-value ${weightedScoreClass}">${weightedScore.toFixed(1)}/10</span>
-                <span class="score-formula">40% Quality + 40% Popularity + 20% Simplicity</span>
+                <span class="score-value">${d.scores.complexity}/10</span>
               </div>
             </div>
           `;
@@ -392,6 +291,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return '';
       });
+      
+    // Calculate and add score badge
+    toolItems.each(function(d) {
+      if (d.scores) {
+        // Calculate average score (note: complexity is reversed)
+        const reversedComplexity = 10 - d.scores.complexity;
+        const avgScore = ((d.scores.education + d.scores.popularity + reversedComplexity) / 3).toFixed(1);
+        
+        // Create score badge with appropriate color class
+        let scoreClass = 'medium';
+        if (avgScore >= 7.5) {
+          scoreClass = 'high';
+        } else if (avgScore < 5) {
+          scoreClass = 'low';
+        }
+        
+        // Append the badge
+        d3.select(this)
+          .append("div")
+          .attr("class", `tool-score-badge ${scoreClass}`)
+          .text(`${avgScore}`);
+      }
+    });
   }
 
   /**
@@ -399,12 +321,12 @@ document.addEventListener('DOMContentLoaded', function() {
    */
   function animateFieldColumns(fieldColumns) {
     fieldColumns.style("opacity", 0)
-      .style("transform", "translateX(20px)")
+      .style("transform", "translateY(20px)")
       .transition()
       .duration(500)
       .delay((d, i) => i * 100)
       .style("opacity", 1)
-      .style("transform", "translateX(0)");
+      .style("transform", "translateY(0)");
   }
 
   /**
@@ -525,9 +447,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const fieldName = fieldColumn.querySelector('.field-header').textContent.trim();
     console.log(`Processing field: ${fieldName}`);
     
-    // Make sure all field columns are visible
-    fieldColumn.style.display = 'block';
-    
     // Get all level sections in this field
     const levelSections = fieldColumn.querySelectorAll('.level-section');
     let totalVisibleTools = 0;
@@ -619,38 +538,4 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Call ensureFullWidthLayout after a short delay to handle any initial rendering issues
   setTimeout(ensureFullWidthLayout, 500);
-
-  // Add a function to fix layout issues after the page loads
-  function fixLayoutIssues() {
-    console.log("Fixing layout issues...");
-    
-    // Force horizontal layout for all fields containers
-    document.querySelectorAll('.fields-container').forEach(container => {
-      Object.assign(container.style, {
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'nowrap',
-        overflowX: 'auto',
-        width: '100%',
-        gap: '1rem'
-      });
-    });
-    
-    // Force fixed width for all field columns
-    document.querySelectorAll('.field-column').forEach(column => {
-      Object.assign(column.style, {
-        flex: '0 0 250px',
-        minWidth: '250px',
-        width: '250px',
-        display: 'block',
-        marginRight: '1rem'
-      });
-    });
-  }
-
-  // Add an additional call to fix layout issues after everything has loaded
-  window.addEventListener('load', function() {
-    fixLayoutIssues();
-    setTimeout(fixLayoutIssues, 1000); // Run again after 1 second to be sure
-  });
 }); 

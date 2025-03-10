@@ -16,7 +16,7 @@ const engineeringTechnicalData = [
           {
             name: "GitHub Copilot",
             description: "AI pair programmer that suggests code completions.",
-            icon: "fa-brands fa-github",
+            icon: "fa-solid fa-code",
             url: "https://github.com/features/copilot",
             scores: {
               education: 8,
@@ -42,7 +42,7 @@ const engineeringTechnicalData = [
           {
             name: "Tabnine",
             description: "AI code completion assistant for multiple languages.",
-            icon: "fa-solid fa-code",
+            icon: "fa-solid fa-keyboard",
             url: "https://www.tabnine.com",
             scores: {
               education: 7,
@@ -131,9 +131,8 @@ const engineeringTechnicalData = [
           {
             name: "Notion AI",
             description: "AI writing assistant integrated with Notion workspace.",
-            icon: "fa-solid fa-book",
+            icon: "fa-solid fa-lightbulb",
             url: "https://www.notion.so/product/ai",
-            showScoreBadge: false,
             scores: {
               education: 8,
               popularity: 9,
@@ -171,48 +170,10 @@ const engineeringTechnicalData = [
         ]
       }
     ]
-  },
-  {
-    field: "Development Tools",
-    icon: "🛠️",
-    cssClass: "devtools",
-    levels: [
-      {
-        name: "All Levels",
-        tools: [
-          {
-            name: "Replit",
-            description: "Online IDE with AI capabilities.",
-            icon: "fa-solid fa-laptop-code",
-            url: "https://replit.com",
-            scores: {
-              education: 8,
-              popularity: 8,
-              complexity: 5
-            },
-            paidStatus: "Free tier; Pro plan ($10/month).",
-            detailedDescription: "Replit is an online IDE that allows you to code in 50+ languages without any setup. It includes AI features for code completion, explanation, and debugging."
-          },
-          {
-            name: "CodeWhisperer",
-            description: "Amazon's AI coding assistant.",
-            icon: "fa-brands fa-aws",
-            url: "https://aws.amazon.com/codewhisperer/",
-            scores: {
-              education: 7,
-              popularity: 7,
-              complexity: 6
-            },
-            paidStatus: "Free tier; Professional tier for enterprise.",
-            detailedDescription: "Amazon CodeWhisperer is an AI coding companion that provides code suggestions based on your comments and existing code. It integrates with popular IDEs and supports multiple programming languages."
-          }
-        ]
-      }
-    ]
   }
 ];
 
-// Section 2: Business & Productivity
+// Section 1: Business & Productivity
 const businessProductivityData = [
   {
     field: "AI Assistants (Chatbots)",
@@ -227,7 +188,7 @@ const businessProductivityData = [
             description: "Multimodal AI assistant for brainstorming, translation, coding, and data analysis.",
             icon: "custom-logo", // DONT FORGET THIS ONE TO HAVE CUSTOM LOGO WORKING
             logoUrl: "logos/chatgpt-logo.png",
-            fallbackIcon: "fa-solid fa-comment-dots",
+            fallbackIcon: "fa-solid fa-comment",
             url: "https://chat.openai.com",
             scores: {
               education: 9,
@@ -244,11 +205,10 @@ const businessProductivityData = [
             logoUrl: "logos/claude-logo.png",
             fallbackIcon: "fa-solid fa-robot",
             url: "https://claude.ai",
-            showScoreBadge: true,
             scores: {
               education: 9,
               popularity: 8,
-              complexity: 6
+              complexity: 3
             },
             paidStatus: "Free tier; Pro plan ($20/month).",
             detailedDescription: "Claude is an AI assistant known for its reasoning capabilities and ability to analyze long documents. It excels at thoughtful, nuanced responses and can handle complex instructions with multiple steps."
@@ -298,6 +258,7 @@ const businessProductivityData = [
             paidStatus: "Free tier; Advanced plan ($20/month).",
             detailedDescription: "Gemini (formerly Bard) is Google's AI assistant with strong multimodal capabilities. It can analyze images, process text, and has direct access to Google Search for up-to-date information."
           }
+          
         ]
       }
     ]
@@ -313,7 +274,7 @@ const businessProductivityData = [
           {
             name: "Trello AI",
             description: "AI features for Trello boards and cards.",
-            icon: "fa-brands fa-trello",
+            icon: "fa-solid fa-list-check",
             url: "https://trello.com/ai",
             scores: {
               education: 6,
@@ -434,7 +395,7 @@ const businessProductivityData = [
           {
             name: "Zendesk AI",
             description: "AI customer support automation and insights.",
-            icon: "fa-solid fa-user-shield",
+            icon: "fa-solid fa-ticket",
             url: "https://www.zendesk.com/platform/ai/",
             scores: {
               education: 7,
@@ -491,44 +452,6 @@ const businessProductivityData = [
         ]
       }
     ]
-  },
-  {
-    field: "Social Media",
-    icon: "📱",
-    cssClass: "social",
-    levels: [
-      {
-        name: "All Levels",
-        tools: [
-          {
-            name: "Vista Social",
-            description: "Platform for planning, scheduling, and analyzing social media content.",
-            icon: "fa-solid fa-share-alt",
-            url: "https://vistasocial.com",
-            scores: {
-              education: 8,
-              popularity: 8,
-              complexity: 6
-            },
-            paidStatus: "Plans from $39/month.",
-            detailedDescription: "Vista Social offers visual scheduling, AI-generated captions, and consolidated engagement tools. Good for small to medium-sized businesses and agencies."
-          },
-          {
-            name: "FeedHive",
-            description: "AI-driven platform for content suggestions and scheduling.",
-            icon: "fa-solid fa-calendar-days",
-            url: "https://feedhive.com",
-            scores: {
-              education: 8,
-              popularity: 7,
-              complexity: 5
-            },
-            paidStatus: "From $19/month.",
-            detailedDescription: "FeedHive offers AI-driven content suggestions, hashtag recommendations, and visual previews. Good for freelancers and small businesses."
-          }
-        ]
-      }
-    ]
   }
 ];
 
@@ -545,7 +468,7 @@ const contentMediaData = [
           {
             name: "DALL-E 3",
             description: "OpenAI's advanced text-to-image generator.",
-            icon: "fa-solid fa-robot",
+            icon: "fa-solid fa-image",
             url: "https://openai.com/dall-e-3",
             scores: {
               education: 8,
@@ -557,22 +480,21 @@ const contentMediaData = [
           },
           {
             name: "Midjourney",
-            description: "AI image generator with artistic style and high-quality output.",
-            icon: "fa-solid fa-paint-brush",
+            description: "AI art generator with detailed style control.",
+            icon: "fa-solid fa-paintbrush",
             url: "https://www.midjourney.com",
-            showScoreBadge: false,
             scores: {
               education: 7,
               popularity: 9,
-              complexity: 6
+              complexity: 7
             },
-            paidStatus: "Paid only ($10-$60/month).",
-            detailedDescription: "Midjourney is an AI image generator known for its artistic style and high-quality output. It operates primarily through Discord and offers various subscription tiers for different usage levels."
+            paidStatus: "Basic plan ($10/month); Standard plan ($30/month).",
+            detailedDescription: "Midjourney creates artistic images from text prompts with exceptional aesthetic quality. It offers fine control over artistic styles and is popular for creating concept art, illustrations, and design assets."
           },
           {
             name: "Stable Diffusion",
             description: "Open-source image generation model.",
-            icon: "fa-solid fa-layer-group",
+            icon: "fa-solid fa-wand-magic-sparkles",
             url: "https://stability.ai",
             scores: {
               education: 9,
@@ -610,7 +532,7 @@ const contentMediaData = [
           {
             name: "Synthesia",
             description: "AI video creation with virtual presenters.",
-            icon: "fa-solid fa-user-tie",
+            icon: "fa-solid fa-video",
             url: "https://www.synthesia.io",
             scores: {
               education: 7,
@@ -676,6 +598,108 @@ const contentMediaData = [
     ]
   },
   {
+    field: "Design & Presentations",
+    icon: "🎭",
+    cssClass: "design",
+    levels: [
+      {
+        name: "All Levels",
+        tools: [
+          {
+            name: "Canva Magic Studio",
+            description: "AI-powered design suite within Canva, with features like Magic Design and Magic Write.",
+            icon: "fa-brands fa-canva",
+            url: "https://www.canva.com/magic-studio/",
+            scores: {
+              education: 9,
+              popularity: 10,
+              complexity: 4
+            },
+            paidStatus: "Freemium model; Canva Pro $15/month; Canva for Teams $30/month (3 seats).",
+            detailedDescription: "Canva Magic Studio offers AI-powered design tools like Magic Design, Magic Write, Magic Edit, Magic Eraser, and Magic Animate. Good for individuals and teams without extensive design experience."
+          },
+          {
+            name: "Looka",
+            description: "AI-powered logo design platform.",
+            icon: "fa-solid fa-swatchbook",
+            url: "https://looka.com",
+            scores: {
+              education: 8,
+              popularity: 8,
+              complexity: 3
+            },
+            paidStatus: "Logo-Only Packages: Basic $20, Premium $65; Brand Kit Subscriptions: $96/year, $129/year.",
+            detailedDescription: "Looka generates logo options based on user input. Offers Brand Kit with matching social media templates. Good for small businesses and personal projects."
+          },
+          {
+            name: "Gamma",
+            description: "AI-powered presentation tool for creating visually appealing slides.",
+            icon: "fa-solid fa-presentation-screen",
+            url: "https://gamma.app",
+            scores: {
+              education: 8,
+              popularity: 8,
+              complexity: 4
+            },
+            paidStatus: "Free Plan; Plus Plan $10/user/month.",
+            detailedDescription: "Gamma generates slides from prompts, handling layout and formatting. Good for users who need polished presentations quickly."
+          },
+          {
+            name: "Presentations.ai",
+            description: "AI platform for creating presentations, with a focus on brand alignment.",
+            icon: "fa-solid fa-desktop",
+            url: "https://presentations.ai",
+            scores: {
+              education: 8,
+              popularity: 7,
+              complexity: 4
+            },
+            paidStatus: "Starter Plan free (limited-time); Pro Plan $198/user/year.",
+            detailedDescription: "Presentations.ai simplifies presentation creation with a focus on brand alignment. Offers real-time collaboration."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    field: "Social Media",
+    icon: "📱",
+    cssClass: "social",
+    levels: [
+      {
+        name: "All Levels",
+        tools: [
+          {
+            name: "Vista Social",
+            description: "Platform for planning, scheduling, and analyzing social media content.",
+            icon: "fa-solid fa-share-nodes",
+            url: "https://vistasocial.com",
+            scores: {
+              education: 8,
+              popularity: 8,
+              complexity: 6
+            },
+            paidStatus: "Plans from $39/month.",
+            detailedDescription: "Vista Social offers visual scheduling, AI-generated captions, and consolidated engagement tools. Good for small to medium-sized businesses and agencies."
+          },
+          {
+            name: "FeedHive",
+            description: "AI-driven platform for content suggestions and scheduling.",
+            icon: "fa-solid fa-calendar-days",
+            url: "https://feedhive.com",
+            scores: {
+              education: 8,
+              popularity: 7,
+              complexity: 5
+            },
+            paidStatus: "From $19/month.",
+            detailedDescription: "FeedHive offers AI-driven content suggestions, hashtag recommendations, and visual previews. Good for freelancers and small businesses."
+          }
+        ]
+      }
+    ]
+  },
+  {
     field: "Voice Generation",
     icon: "🔊",
     cssClass: "voice",
@@ -686,7 +710,7 @@ const contentMediaData = [
           {
             name: "ElevenLabs",
             description: "AI voice generator with text-to-speech and voice cloning.",
-            icon: "fa-solid fa-microphone-alt",
+            icon: "fa-solid fa-waveform",
             url: "https://elevenlabs.io",
             scores: {
               education: 9,
@@ -697,17 +721,17 @@ const contentMediaData = [
             detailedDescription: "ElevenLabs offers high-quality text-to-speech and voice cloning. Allows for adjusting pitch, speed, and tone. Also offers AI Dubbing Studio."
           },
           {
-            name: "Play.ht",
+            name: "Murf",
             description: "AI voice generator for creating voiceovers.",
-            icon: "fa-solid fa-volume-up",
-            url: "https://play.ht",
+            icon: "fa-solid fa-microphone-lines",
+            url: "https://murf.ai",
             scores: {
               education: 7,
               popularity: 8,
               complexity: 5
             },
             paidStatus: "Free Plan; Creator Plan $29/month.",
-            detailedDescription: "Play.ht generates realistic voices for voiceovers. Offers a wide selection of voices and allows for adjusting parameters. Includes voice cloning."
+            detailedDescription: "Murf AI generates realistic voices for voiceovers. Offers a wide selection of voices and allows for adjusting parameters. Includes voice cloning."
           }
         ]
       }
@@ -728,7 +752,7 @@ const scienceLiteratureData = [
           {
             name: "Elicit",
             description: "AI research assistant for finding and summarizing papers.",
-            icon: "fa-solid fa-microscope",
+            icon: "fa-solid fa-book",
             url: "https://elicit.org",
             scores: {
               education: 10,
@@ -741,7 +765,7 @@ const scienceLiteratureData = [
           {
             name: "Consensus",
             description: "AI-powered search engine for scientific papers.",
-            icon: "fa-solid fa-chart-line",
+            icon: "fa-solid fa-microscope",
             url: "https://consensus.app",
             scores: {
               education: 9,
@@ -750,6 +774,19 @@ const scienceLiteratureData = [
             },
             paidStatus: "Free tier; Premium features available.",
             detailedDescription: "Consensus searches through millions of research papers to find scientific consensus on specific questions. It extracts key findings and provides citations to support its answers."
+          },
+          {
+            name: "Deep Research",
+            description: "Finds, analyzes, and synthesizes online sources to create comprehensive reports.",
+            icon: "fa-solid fa-book-open",
+            url: "https://openai.com/research",
+            scores: {
+              education: 9,
+              popularity: 7,
+              complexity: 8
+            },
+            paidStatus: "Part of OpenAI's offerings, access may vary.",
+            detailedDescription: "Deep Research synthesizes information from multiple sources. Good for legal analysis, investment reports, and technical breakdowns. Offers citations."
           }
         ]
       }
@@ -766,7 +803,7 @@ const scienceLiteratureData = [
           {
             name: "Otter.ai",
             description: "AI meeting transcription and note-taking.",
-            icon: "fa-solid fa-file-alt",
+            icon: "fa-solid fa-microphone",
             url: "https://otter.ai",
             scores: {
               education: 8,
@@ -779,7 +816,7 @@ const scienceLiteratureData = [
           {
             name: "Tldraw",
             description: "AI-enhanced drawing and diagramming tool.",
-            icon: "fa-solid fa-pencil-ruler",
+            icon: "fa-solid fa-pen-to-square",
             url: "https://tldraw.com",
             scores: {
               education: 7,
@@ -817,7 +854,7 @@ const scienceLiteratureData = [
           {
             name: "Wordtune",
             description: "AI writing assistant for rewriting and rephrasing.",
-            icon: "fa-solid fa-pen",
+            icon: "fa-solid fa-pen-nib",
             url: "https://www.wordtune.com",
             scores: {
               education: 8,
@@ -832,38 +869,38 @@ const scienceLiteratureData = [
     ]
   },
   {
-    field: "Deep Research",
-    icon: "🔬",
-    cssClass: "deepresearch",
+    field: "Resume & Career",
+    icon: "📄",
+    cssClass: "resume",
     levels: [
       {
         name: "All Levels",
         tools: [
           {
-            name: "Semantic Scholar",
-            description: "AI-enhanced academic search engine.",
-            icon: "fa-solid fa-graduation-cap",
-            url: "https://www.semanticscholar.org",
+            name: "Teal",
+            description: "AI-powered resume builder with suggestions and job tracking.",
+            icon: "fa-solid fa-file-user",
+            url: "https://www.tealhq.com",
             scores: {
-              education: 9,
+              education: 8,
               popularity: 8,
-              complexity: 5
+              complexity: 4
             },
-            paidStatus: "Free.",
-            detailedDescription: "Semantic Scholar uses AI to help researchers find relevant academic papers. It analyzes the content of papers to understand their significance and relationships to other research."
+            paidStatus: "Free Plan; Teal+ Plan $29/month.",
+            detailedDescription: "Teal generates bullet points and tailors resumes to job descriptions. Offers real-time feedback."
           },
           {
-            name: "Connected Papers",
-            description: "Visual tool to explore academic papers.",
-            icon: "fa-solid fa-project-diagram",
-            url: "https://www.connectedpapers.com",
+            name: "Kickresume",
+            description: "AI resume builder with templates and content suggestions.",
+            icon: "fa-solid fa-file-alt",
+            url: "https://www.kickresume.com",
             scores: {
               education: 8,
               popularity: 7,
               complexity: 4
             },
-            paidStatus: "Free tier; Pro plan available.",
-            detailedDescription: "Connected Papers creates visual graphs showing the relationships between academic papers. It helps researchers discover relevant papers they might have missed through traditional search methods."
+            paidStatus: "Free Plan; Monthly Plan $19/month.",
+            detailedDescription: "Kickresume offers AI-driven content suggestions and real-time feedback. Good for creating tailored resumes."
           }
         ]
       }
