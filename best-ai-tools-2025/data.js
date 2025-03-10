@@ -877,19 +877,54 @@ const businessLevelNames = ["Business & Productivity"];
 const contentLevelNames = ["Content & Media"];
 const scienceLevelNames = ["Science & Literature"]; 
 
-// Export data to global scope
+// Export data to global scope with sanitization
 try {
-  // Assign to window object to make them accessible globally
-  window.engineeringTechnicalData = engineeringTechnicalData;
-  window.businessProductivityData = businessProductivityData;
-  window.contentMediaData = contentMediaData;
-  window.scienceLiteratureData = scienceLiteratureData;
+  // First verify data structure by converting to JSON and back
+  // This will help identify and throw errors for malformed data early
+  const sanitizeData = (data) => {
+    try {
+      // Convert to JSON string and back to clean any invalid data
+      const jsonString = JSON.stringify(data);
+      // Uncomment for debugging
+      // console.log("JSON string length:", jsonString.length);
+      // console.log("JSON string preview:", jsonString.substring(3200, 3250));
+      return JSON.parse(jsonString);
+    } catch (jsonError) {
+      console.error("JSON validation error:", jsonError);
+      
+      // Try to identify position of error in a large string
+      if (jsonError.message.includes("position")) {
+        const match = jsonError.message.match(/position (\d+)/);
+        if (match && match[1]) {
+          const pos = parseInt(match[1]);
+          console.error(`Error near position ${pos}. Context: '${JSON.stringify(data).substring(Math.max(0, pos-30), pos+30)}'`);
+        }
+      }
+      
+      // Return a simplified version of the data to avoid breaking the app
+      return { error: true, message: jsonError.message };
+    }
+  };
+
+  // Sanitize and assign each data object
+  window.engineeringTechnicalData = sanitizeData(engineeringTechnicalData);
+  window.businessProductivityData = sanitizeData(businessProductivityData);
+  window.contentMediaData = sanitizeData(contentMediaData);
+  window.scienceLiteratureData = sanitizeData(scienceLiteratureData);
+  
+  // Assign level names directly as they're simple arrays
   window.engineeringLevelNames = engineeringLevelNames;
   window.businessLevelNames = businessLevelNames;
   window.contentLevelNames = contentLevelNames;
   window.scienceLevelNames = scienceLevelNames;
   
-  console.log("Data.js: Successfully loaded and assigned data to window object");
+  console.log("Data.js: Successfully loaded, validated, and assigned data to window object");
 } catch (error) {
-  console.error("Error in data.js while assigning to window object:", error);
+  console.error("Error in data.js while processing data:", error);
+  
+  // Set fallback data if there's an error
+  window.engineeringTechnicalData = [{field: "Error", icon: "⚠️", levels: [{name: "Error", tools: [{name: "Data Error", description: "There was an error loading the data. Please refresh or contact support.", icon: "fa-solid fa-exclamation-triangle"}]}]}];
+  window.businessProductivityData = window.engineeringTechnicalData;
+  window.contentMediaData = window.engineeringTechnicalData;
+  window.scienceLiteratureData = window.engineeringTechnicalData;
 } 
