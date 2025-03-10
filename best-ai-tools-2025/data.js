@@ -1,34 +1,7 @@
 /**
  * AI Tools: From Zero to Hero
  * Data Structure
- * 
- * This script is loaded via Next.js <Script> component
- * It defines global variables for AI tools data
  */
-
-// Ensure these variables are explicitly set on the window object
-(function(window) {
-  // Helper function to safely set global variables
-  function setGlobal(name, value) {
-    window[name] = value;
-    console.log(`Global variable ${name} set successfully`);
-  }
-  
-  // When this script loads, dispatch an event to notify listeners
-  function notifyLoaded() {
-    if (window.dispatchEvent) {
-      console.log("Dispatching dataJsLoaded event");
-      window.dataJsLoaded = true;
-      window.dispatchEvent(new Event('dataJsLoaded'));
-    }
-  }
-  
-  // Register a load completion handler
-  if (document.readyState === 'complete') {
-    notifyLoaded();
-  } else {
-    window.addEventListener('load', notifyLoaded);
-  }
 
 // Section 1: Engineering & Technical
 const engineeringTechnicalData = [
@@ -284,7 +257,7 @@ const businessProductivityData = [
             name: "Grok3",
             description: "AI assistant with access to real-time Twitter data and fewer content restrictions.",
             icon: "custom-logo",
-            logoUrl: "logos/claude-logo.png",
+            logoUrl: "logos/grok3-logo.png",
             fallbackIcon: "fa-brands fa-x-twitter",
             url: "https://x.ai",
             scores: {
@@ -902,12 +875,4 @@ const scienceLiteratureData = [
 const engineeringLevelNames = ["Engineering & Technical"];
 const businessLevelNames = ["Business & Productivity"];
 const contentLevelNames = ["Content & Media"];
-const scienceLevelNames = ["Science & Literature"];
-
-// Explicitly set global variables
-setGlobal('engineeringTechnicalData', engineeringTechnicalData);
-setGlobal('businessProductivityData', businessProductivityData);
-setGlobal('contentMediaData', contentMediaData);
-setGlobal('scienceLiteratureData', scienceLiteratureData);
-
-})(window); 
+const scienceLevelNames = ["Science & Literature"]; 
