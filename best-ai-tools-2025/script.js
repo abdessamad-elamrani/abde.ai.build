@@ -42,9 +42,35 @@ document.addEventListener('DOMContentLoaded', function() {
       container.style.width = '100%';
     });
     
-    // Make sure all fields containers use full width
+    // Force horizontal layout for fields containers
     document.querySelectorAll('.fields-container').forEach(container => {
-      container.style.width = '100%';
+      Object.assign(container.style, {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'nowrap',
+        overflowX: 'auto',
+        width: '100%',
+        gap: '1rem'
+      });
+    });
+    
+    // Force fixed width for field columns
+    document.querySelectorAll('.field-column').forEach(column => {
+      Object.assign(column.style, {
+        flex: '0 0 250px',
+        minWidth: '250px',
+        width: '250px',
+        display: 'block',
+        marginRight: '1rem'
+      });
+      
+      // Check if we're on a very small screen
+      if (window.innerWidth <= 480) {
+        Object.assign(column.style, {
+          flex: '1 0 100%',
+          width: '100%'
+        });
+      }
     });
   }
 
@@ -75,16 +101,25 @@ document.addEventListener('DOMContentLoaded', function() {
    * Create the fields container with all field columns
    */
   function createFieldsContainer(chart, dataSet) {
+    // Create container with explicit horizontal layout
     const fieldsContainer = chart.append("div")
       .attr("class", "fields-container")
-      .style("width", "100%"); // Ensure full width
+      .style("width", "100%")
+      .style("display", "flex")
+      .style("flex-direction", "row")
+      .style("flex-wrap", "nowrap")
+      .style("overflow-x", "auto");
 
-    // Create vertical field columns
+    // Create horizontal field columns with fixed width
     const fieldColumns = fieldsContainer.selectAll(".field-column")
       .data(dataSet)
       .enter()
       .append("div")
-      .attr("class", d => `field-column ${d.cssClass}`);
+      .attr("class", d => `field-column ${d.cssClass}`)
+      .style("flex", "0 0 250px")
+      .style("min-width", "250px")
+      .style("width", "250px")
+      .style("margin-right", "1rem");
 
     // Add field headers
     fieldColumns.append("div")
@@ -96,6 +131,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add animation to field columns
     animateFieldColumns(fieldColumns);
+    
+    // Return the field columns for further processing
+    return fieldColumns;
   }
 
   /**
@@ -361,12 +399,12 @@ document.addEventListener('DOMContentLoaded', function() {
    */
   function animateFieldColumns(fieldColumns) {
     fieldColumns.style("opacity", 0)
-      .style("transform", "translateY(20px)")
+      .style("transform", "translateX(20px)")
       .transition()
       .duration(500)
       .delay((d, i) => i * 100)
       .style("opacity", 1)
-      .style("transform", "translateY(0)");
+      .style("transform", "translateX(0)");
   }
 
   /**
@@ -487,6 +525,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const fieldName = fieldColumn.querySelector('.field-header').textContent.trim();
     console.log(`Processing field: ${fieldName}`);
     
+    // Make sure all field columns are visible
+    fieldColumn.style.display = 'block';
+    
     // Get all level sections in this field
     const levelSections = fieldColumn.querySelectorAll('.level-section');
     let totalVisibleTools = 0;
@@ -578,4 +619,38 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Call ensureFullWidthLayout after a short delay to handle any initial rendering issues
   setTimeout(ensureFullWidthLayout, 500);
+
+  // Add a function to fix layout issues after the page loads
+  function fixLayoutIssues() {
+    console.log("Fixing layout issues...");
+    
+    // Force horizontal layout for all fields containers
+    document.querySelectorAll('.fields-container').forEach(container => {
+      Object.assign(container.style, {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'nowrap',
+        overflowX: 'auto',
+        width: '100%',
+        gap: '1rem'
+      });
+    });
+    
+    // Force fixed width for all field columns
+    document.querySelectorAll('.field-column').forEach(column => {
+      Object.assign(column.style, {
+        flex: '0 0 250px',
+        minWidth: '250px',
+        width: '250px',
+        display: 'block',
+        marginRight: '1rem'
+      });
+    });
+  }
+
+  // Add an additional call to fix layout issues after everything has loaded
+  window.addEventListener('load', function() {
+    fixLayoutIssues();
+    setTimeout(fixLayoutIssues, 1000); // Run again after 1 second to be sure
+  });
 }); 
