@@ -257,7 +257,7 @@ const businessProductivityData = [
             name: "Grok3",
             description: "AI assistant with access to real-time Twitter data and fewer content restrictions.",
             icon: "custom-logo",
-            logoUrl: "logos/grok3-logo.png",
+            logoUrl: "logos/claude-logo.png",
             fallbackIcon: "fa-brands fa-x-twitter",
             url: "https://x.ai",
             scores: {
