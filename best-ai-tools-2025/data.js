@@ -876,3 +876,20 @@ const engineeringLevelNames = ["Engineering & Technical"];
 const businessLevelNames = ["Business & Productivity"];
 const contentLevelNames = ["Content & Media"];
 const scienceLevelNames = ["Science & Literature"]; 
+
+// Export data to global scope
+try {
+  // Assign to window object to make them accessible globally
+  window.engineeringTechnicalData = engineeringTechnicalData;
+  window.businessProductivityData = businessProductivityData;
+  window.contentMediaData = contentMediaData;
+  window.scienceLiteratureData = scienceLiteratureData;
+  window.engineeringLevelNames = engineeringLevelNames;
+  window.businessLevelNames = businessLevelNames;
+  window.contentLevelNames = contentLevelNames;
+  window.scienceLevelNames = scienceLevelNames;
+  
+  console.log("Data.js: Successfully loaded and assigned data to window object");
+} catch (error) {
+  console.error("Error in data.js while assigning to window object:", error);
+} 
