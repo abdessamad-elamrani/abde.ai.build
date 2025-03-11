@@ -556,18 +556,71 @@ document.addEventListener('DOMContentLoaded', function() {
     if (totalTools > MAX_TOOLS_VISIBLE) {
       const lastSection = levelSections[levelSections.length - 1];
       
-      // Add "Show more" button
+      // Add "Show more" button with improved styling
       const showMoreBtn = document.createElement('button');
       showMoreBtn.className = 'show-more-btn';
-      showMoreBtn.textContent = `+${totalTools - MAX_TOOLS_VISIBLE} more`;
+      
+      // Create button content with improved styling
+      const buttonContent = document.createElement('div');
+      buttonContent.className = 'show-more-btn-content';
+      buttonContent.innerHTML = `
+        <span>+${totalTools - MAX_TOOLS_VISIBLE} more</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      `;
+      showMoreBtn.appendChild(buttonContent);
+      
+      // Apply more visible styling with light colors by default
+      Object.assign(showMoreBtn.style, {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        marginTop: '10px',
+        padding: '8px 12px',
+        borderRadius: '6px',
+        border: '1px solid rgba(59, 130, 246, 0.4)',
+        background: 'linear-gradient(to right, rgba(96, 165, 250, 0.3), rgba(37, 99, 235, 0.25))',
+        backdropFilter: 'blur(8px)',
+        color: 'white',
+        fontSize: '11px',
+        fontWeight: '600',
+        cursor: 'pointer',
+        transition: 'all 0.3s ease',
+        boxShadow: '0 3px 5px rgba(0, 0, 0, 0.2), 0 0 3px rgba(99, 102, 241, 0.3)'
+      });
+      
+      showMoreBtn.onmouseenter = function() {
+        Object.assign(this.style, {
+          borderColor: 'rgba(129, 140, 248, 0.6)',
+          background: 'linear-gradient(to right, rgba(37, 99, 235, 0.25), rgba(139, 92, 246, 0.25))',
+          color: 'white',
+          transform: 'translateY(-1px)',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3), 0 0 4px rgba(99, 102, 241, 0.4)'
+        });
+      };
+      
+      showMoreBtn.onmouseleave = function() {
+        Object.assign(this.style, {
+          borderColor: 'rgba(129, 140, 248, 0.4)',
+          background: 'linear-gradient(to right, rgba(37, 99, 235, 0.25), rgba(139, 92, 246, 0.25))',
+          color: 'white',
+          transform: 'translateY(0)',
+          boxShadow: '0 3px 5px rgba(0, 0, 0, 0.2), 0 0 3px rgba(99, 102, 241, 0.3)'
+        });
+      };
+      
       showMoreBtn.onclick = function() {
         // Show all tools in all sections
         fieldColumn.querySelectorAll('.tool-item').forEach(tool => {
           tool.style.display = 'flex';
         });
-        // Remove the button
-        this.remove();
+        // Remove the button with animation
+        this.style.opacity = '0';
+        setTimeout(() => this.remove(), 300);
       };
+      
       lastSection.appendChild(showMoreBtn);
     }
   });
