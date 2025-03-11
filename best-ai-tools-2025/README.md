@@ -53,10 +53,11 @@ Each array contains fields, which contain levels, which contain tools.
   logoUrl: "logos/tool-logo.png",         // Path to logo image (if using custom logo)
   fallbackIcon: "fa-solid fa-icon",       // Fallback icon if logo fails to load
   url: "https://tool-website.com",        // URL to the tool's website
+  showScoreBadge: true,                   // Whether to show score badge (optional, defaults to true)
   scores: {                               // Scores out of 10
-    education: 8,                         // Educational value
-    popularity: 7,                         // Popularity
-    complexity: 6                         // Complexity/sophistication
+    education: 8,                         // Quality score
+    popularity: 7,                        // Popularity score
+    complexity: 6                         // Complexity score (lower is better)
   },
   paidStatus: "Free tier; Pro: $20/mo",   // Pricing information
   detailedDescription: "Longer description..." // Detailed description for tooltips

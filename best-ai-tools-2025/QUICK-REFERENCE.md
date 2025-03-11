@@ -11,6 +11,7 @@ This guide provides quick instructions for common tasks related to the Best AI T
   description: "Brief description of the tool",
   icon: "fa-solid fa-cube", // Font Awesome icon
   url: "https://tool-website.com",
+  showScoreBadge: true, // Optional: set to false to hide score badge
   scores: {
     education: 8,
     popularity: 7,
@@ -32,6 +33,7 @@ This guide provides quick instructions for common tasks related to the Best AI T
   logoUrl: "logos/tool-logo.png", // Path to logo file
   fallbackIcon: "fa-solid fa-cube", // Fallback icon
   url: "https://tool-website.com",
+  showScoreBadge: true, // Optional: set to false to hide score badge
   scores: {
     education: 8,
     popularity: 7,
