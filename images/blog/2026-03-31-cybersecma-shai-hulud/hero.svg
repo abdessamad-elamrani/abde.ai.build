@@ -1,0 +1,28 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#09090B"/>
+  <rect x="40" y="40" width="1120" height="550" rx="28" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="28" stroke="#27272A" stroke-width="2"/>
+  <circle cx="1010" cy="150" r="150" fill="url(#glow)" opacity="0.7"/>
+  <circle cx="920" cy="500" r="220" fill="#7F1D1D" opacity="0.18"/>
+  <rect x="88" y="92" width="180" height="34" rx="17" fill="#111827" stroke="#374151"/>
+  <text x="112" y="114" fill="#FCA5A5" font-family="Arial, sans-serif" font-size="18" font-weight="700">CyberSec.ma</text>
+  <text x="88" y="220" fill="#FAFAFA" font-family="Arial, sans-serif" font-size="58" font-weight="700">Shai-Hulud 2.0</text>
+  <text x="88" y="286" fill="#E4E4E7" font-family="Arial, sans-serif" font-size="34" font-weight="400">Community research, lab replication,</text>
+  <text x="88" y="332" fill="#E4E4E7" font-family="Arial, sans-serif" font-size="34" font-weight="400">OSINT, and a free public checker.</text>
+  <rect x="88" y="396" width="370" height="88" rx="22" fill="#111827" stroke="#374151"/>
+  <text x="120" y="448" fill="#FDE68A" font-family="Arial, sans-serif" font-size="26" font-weight="700">Volunteer research for the community</text>
+  <path d="M942 248C942 208.235 909.765 176 870 176C830.235 176 798 208.235 798 248C798 331 870 406 870 406C870 406 942 331 942 248Z" fill="#991B1B"/>
+  <path d="M870 206L894 218V248C894 282 870 302 870 302C870 302 846 282 846 248V218L870 206Z" fill="#F4F4F5"/>
+  <path d="M870 230V274" stroke="#991B1B" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="870" cy="286" r="8" fill="#991B1B"/>
+  <defs>
+    <linearGradient id="bg" x1="40" y1="40" x2="1160" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#18181B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 150) rotate(90) scale(150)">
+      <stop stop-color="#DC2626"/>
+      <stop offset="1" stop-color="#DC2626" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

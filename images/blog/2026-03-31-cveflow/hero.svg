@@ -1,0 +1,68 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#07111F"/>
+  <rect x="28" y="28" width="1144" height="574" rx="30" fill="url(#bg)"/>
+  <rect x="28" y="28" width="1144" height="574" rx="30" stroke="#17314D" stroke-width="2"/>
+  <path d="M730 170H1112" stroke="#17314D" stroke-width="1"/>
+  <path d="M730 250H1112" stroke="#17314D" stroke-width="1"/>
+  <path d="M730 330H1112" stroke="#17314D" stroke-width="1"/>
+  <path d="M730 410H1112" stroke="#17314D" stroke-width="1"/>
+  <path d="M730 490H1112" stroke="#17314D" stroke-width="1"/>
+  <path d="M730 170V520" stroke="#17314D" stroke-width="1"/>
+  <path d="M826 170V520" stroke="#17314D" stroke-width="1"/>
+  <path d="M922 170V520" stroke="#17314D" stroke-width="1"/>
+  <path d="M1018 170V520" stroke="#17314D" stroke-width="1"/>
+  <path d="M1112 170V520" stroke="#17314D" stroke-width="1"/>
+  <circle cx="1030" cy="120" r="150" fill="url(#glow)" opacity="0.5"/>
+  <rect x="84" y="82" width="154" height="36" rx="18" fill="#0F2640" stroke="#234C75"/>
+  <text x="161" y="105" text-anchor="middle" fill="#93C5FD" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Public Project</text>
+  <text x="84" y="218" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700">CVEFlow</text>
+  <text x="84" y="286" fill="#D4DEE9" font-family="Arial, Helvetica, sans-serif" font-size="34">Attack-chain graphs for modern CVEs</text>
+  <text x="84" y="338" fill="#A8B8CB" font-family="Arial, Helvetica, sans-serif" font-size="26">C2, lateral movement, kernel paths, and defender context</text>
+  <rect x="84" y="402" width="418" height="60" rx="16" fill="#0A1A2C" stroke="#1E4A76"/>
+  <text x="293" y="440" text-anchor="middle" fill="#E0F2FE" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Interactive walkthroughs at cveflow.com</text>
+  <rect x="764" y="188" width="132" height="54" rx="14" fill="#0B1C2F" stroke="#1E4A76"/>
+  <rect x="946" y="144" width="132" height="54" rx="14" fill="#0B1C2F" stroke="#1E4A76"/>
+  <rect x="954" y="286" width="132" height="54" rx="14" fill="#0B1C2F" stroke="#1E4A76"/>
+  <rect x="822" y="430" width="148" height="54" rx="14" fill="#0B1C2F" stroke="#1E4A76"/>
+  <rect x="1032" y="430" width="120" height="54" rx="14" fill="#0B1C2F" stroke="#1E4A76"/>
+  <text x="830" y="221" fill="#7DD3FC" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Initial Access</text>
+  <text x="986" y="177" fill="#FBBF24" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Kernel / PrivEsc</text>
+  <text x="989" y="319" fill="#FB923C" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">C2 / Exfil</text>
+  <text x="852" y="463" fill="#93C5FD" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Lateral Movement</text>
+  <text x="1051" y="463" fill="#A7F3D0" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Detection</text>
+  <path d="M896 215C926 202 942 190 958 183" stroke="url(#lineA)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1012 198C1013 224 1013 249 1014 286" stroke="url(#lineB)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M968 340C945 378 914 404 888 430" stroke="url(#lineC)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1042 340C1067 378 1086 405 1091 430" stroke="url(#lineD)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="896" cy="215" r="8" fill="#7DD3FC"/>
+  <circle cx="1012" cy="198" r="8" fill="#FBBF24"/>
+  <circle cx="1014" cy="313" r="8" fill="#FB923C"/>
+  <circle cx="888" cy="430" r="8" fill="#93C5FD"/>
+  <circle cx="1091" cy="430" r="8" fill="#A7F3D0"/>
+  <defs>
+    <linearGradient id="bg" x1="28" y1="28" x2="1172" y2="602" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1727"/>
+      <stop offset="1" stop-color="#0E243A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1030 120) rotate(90) scale(150)">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lineA" x1="896" y1="215" x2="958" y2="183" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DD3FC"/>
+      <stop offset="1" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="lineB" x1="1012" y1="198" x2="1014" y2="286" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#FB923C"/>
+    </linearGradient>
+    <linearGradient id="lineC" x1="968" y1="340" x2="888" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#93C5FD"/>
+    </linearGradient>
+    <linearGradient id="lineD" x1="1042" y1="340" x2="1091" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#A7F3D0"/>
+    </linearGradient>
+  </defs>
+</svg>

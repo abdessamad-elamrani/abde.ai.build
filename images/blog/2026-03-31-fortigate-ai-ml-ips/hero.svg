@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#07111F"/>
+  <rect x="24" y="24" width="1152" height="582" rx="28" fill="url(#bg)"/>
+  <path d="M80 504C194 408 302 355 438 330C579 303 734 320 888 260C965 230 1025 192 1097 126" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="439" cy="330" r="10" fill="#F97316"/>
+  <circle cx="888" cy="260" r="10" fill="#F97316"/>
+  <circle cx="1097" cy="126" r="10" fill="#38BDF8"/>
+  <rect x="86" y="86" width="164" height="38" rx="19" fill="#0F2C46"/>
+  <text x="168" y="111" text-anchor="middle" fill="#93C5FD" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">FortiGate 7.6.6</text>
+  <text x="84" y="214" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">AI/ML IPS for C2</text>
+  <text x="84" y="288" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">and Cobalt Strike</text>
+  <text x="84" y="360" fill="#B6C2D2" font-family="Arial, Helvetica, sans-serif" font-size="28">Protocol-aware classification layered on top of traditional IPS</text>
+  <rect x="84" y="414" width="278" height="56" rx="14" fill="#0B1E33" stroke="#1D4ED8"/>
+  <text x="223" y="449" text-anchor="middle" fill="#DBEAFE" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">HTTP features + ML verdict</text>
+  <rect x="818" y="382" width="262" height="124" rx="20" fill="#081522" stroke="#1E3A5F"/>
+  <text x="849" y="424" fill="#93C5FD" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Detected family</text>
+  <text x="849" y="460" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Backdoor.Cobalt.Strike</text>
+  <text x="849" y="492" fill="#F97316" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Action: DROP_SESSION</text>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="24" x2="1176" y2="606" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1727"/>
+      <stop offset="1" stop-color="#112B46"/>
+    </linearGradient>
+    <linearGradient id="line" x1="80" y1="504" x2="1097" y2="126" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+</svg>
